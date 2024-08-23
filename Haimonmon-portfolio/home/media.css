@@ -1,0 +1,70 @@
+@media (min-width: 700px) and (max-width: 1000px) {
+    :root {
+        --body-padding: 8%;
+    }
+
+    body {
+        padding-top: 20%;
+    }
+
+    .info-cards-container {
+        display: grid;
+        gap: 10px;
+        grid-template-columns: 2fr 1.8fr;
+        grid-template-areas: 
+        "header header"
+        "qoute-card skillset-card"
+        "profession-card skillset-card"
+        "profession-card image-card"
+        "navigation-space navigation-space"
+        ;
+    }
+
+    .introduction {
+        height: 248px;
+        border-radius: 15px 15px 0px 0px;
+    }
+    
+    .skillsets {
+        height: 365px;
+    }
+    
+    .image {
+        height: 102px;
+        overflow: hidden;
+        border-radius: 0 0 15px 0;  
+    }
+    
+    .image img {
+        height: auto;
+        display: block;
+        object-fit: cover;
+        object-position: 0px 0px;
+    }
+    
+    .dream-profession {
+        height: 342px;
+        border-radius: 0 0 0 15px;
+    }
+    
+    .short-qoute {
+        height: 126px;
+        border-radius: 0;
+    }
+
+    .navbar {
+        left: 21%;
+        right: 21%;
+        bottom: 80px;
+        height: 71px;
+    }
+
+    .navbar ul {
+        font-size: 3vw;
+        gap: 8vw;
+    }
+
+    .navigation-stop {
+        height: 120px;
+    }
+}

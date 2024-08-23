@@ -1,0 +1,78 @@
+* {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(0, 0, 0 ,0);
+}
+
+body {
+    background-color: #0F0F0F;
+    font-family: Montserrat,sans-serif;
+    margin: 0;
+    display: grid;
+    place-items: center;
+    padding: var(--body-padding);
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.info-cards-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "header"
+    "skillset-card"
+    "image-card"
+    "profession-card"
+    "qoute-card"
+    "navigation-space"
+    ;
+    gap: 10px;
+    width: var(--container-width);
+    overflow-y: auto;
+}
+
+.info-cards-container div {
+    background-color: #1D1D26;
+    color: #A59C92;
+    place-content: center;
+    text-align: center;
+    max-width: 100%;
+}
+
+.introduction {
+    height: 193px;
+    border-radius: 10px 10px 0px 0px;
+    grid-area: header;
+}
+
+.skillsets {
+    height: 217px;
+    grid-area: skillset-card;
+}
+
+.image {
+    height: 101px;
+    overflow: hidden;
+    grid-area: image-card;
+}
+
+.image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    object-position: 0px 0px;
+}
+
+.dream-profession {
+    height: 190px;
+    grid-area: profession-card;
+}
+
+.short-qoute {
+    height: 101px;
+    border-radius: 0px 0px 10px 10px;
+    grid-area: qoute-card;
+}
+

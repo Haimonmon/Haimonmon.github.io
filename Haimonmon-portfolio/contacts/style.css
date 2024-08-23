@@ -1,0 +1,79 @@
+* {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(0, 0, 0 ,0);
+}
+
+body {
+    background-color: #0F0F0F;
+    font-family: Montserrat,sans-serif;
+    margin: 0;
+    display: grid;
+    place-items: center;
+    padding: var(--body-padding);
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.info-cards-container {
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "github-card"
+    "instagram-card"
+    "linkedin-card"
+    "email-card"
+    "navigation-space"
+    ;
+    gap: 10px;
+    width: var(--container-width);
+    overflow: auto;
+}
+
+.info-cards-container div {
+    background-color: #1D1D26;
+    color: #A59C92;
+    place-content: center;
+    text-align: center;
+    max-width: 100%;
+}
+
+.image {
+    height: 182px;
+    border-radius: 10px 10px 0px 0px;
+    overflow: hidden;
+    grid-area: header;
+}
+
+.image img {
+   width: 100%;
+   height: auto;
+   display: block;
+   object-fit: cover;
+   object-position: 0 -35px;
+}
+
+.github {
+    height: 229px;
+    grid-area: github-card;
+}
+
+.instagram {
+    height: 259px;
+    grid-area: instagram-card;
+}
+
+.linkedin {
+    height: 255px;
+    grid-area: linkedin-card;
+}
+
+.email {
+    height: 100px;
+    border-radius: 0px 0px 10px 10px;
+    grid-area: email-card;
+}
+
+
+

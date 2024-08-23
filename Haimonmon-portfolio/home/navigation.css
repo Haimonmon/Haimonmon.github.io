@@ -1,0 +1,59 @@
+:root {
+    --container-width: 100%;
+    --body-padding: 4%;
+}
+
+.navbar {
+    position: fixed;
+    bottom: 30px; 
+    left: var(--body-padding); 
+    right: var(--body-padding); 
+    background-color: #0F0F0F;
+    border-radius: 10px;
+    height: 50px;
+    border: 1px solid #8A837C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 10vw;
+    background-color: #0F0F0F;
+    font-size: 4.9vw;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #B8AEA2;
+}
+
+.navbar a:focus {
+    outline: none;
+}
+
+.navbar a:hover {
+    opacity: 100%;
+}
+
+.home-button {
+    opacity: 100%;
+}
+
+.project-button {
+    opacity: 50%;
+}
+
+.contact-button {
+    opacity: 50%;
+}
+
+.navigation-stop {
+    height: 65px;
+    background-color: #0F0F0F!important;
+    grid-area: navigation-space;
+}

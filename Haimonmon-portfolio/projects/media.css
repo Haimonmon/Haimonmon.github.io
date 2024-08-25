@@ -1,0 +1,63 @@
+/* Tablet */
+@media (min-width: 700px) and (max-width: 1000px) {
+    :root {
+        --body-padding: 8%;
+    }
+
+    body {
+        padding-top: 20%;
+    }
+
+    .project-carousel {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 30px;
+    }
+
+    .project-card-container {
+        flex: 1 0 100%;
+        display: grid;
+        grid-template-columns: 1.8fr 1.5fr;
+        grid-template-areas: 
+        "image-card image-card"
+        "language-card description-card"
+        "button description-card"
+        ;
+    }
+
+    .languages {
+        height: 264px;
+    }
+
+    .project-image {
+        height: 373px;
+        border-radius: 15px 15px 0 0;
+    }
+
+    .project-description {
+        height: 357px;
+        border-radius: 0 0 15px 0;
+    }
+
+    .project-button-link {
+        height: 85px;
+        border-radius: 0 0 0px 15px;
+    }
+
+    .navbar {
+        left: 21%;
+        right: 21%;
+        bottom: 80px;
+        height: 71px;
+    }
+
+    .navbar ul {
+        font-size: 3vw;
+        gap: 8vw;
+    }
+
+    .navigation-stop {
+        height: 12000px;
+    }
+}

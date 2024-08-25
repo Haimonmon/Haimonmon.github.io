@@ -1,3 +1,8 @@
+/* Desktop*/
+@media (min-width: 1001px) {
+    
+}
+
 /* Tablet */
 @media (min-width: 700px) and (max-width: 1000px) {
     :root {

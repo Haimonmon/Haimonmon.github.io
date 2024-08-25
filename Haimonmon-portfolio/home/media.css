@@ -1,3 +1,79 @@
+
+
+/* small laptop */
+@media (min-width: 1001px) {
+    body {
+        font-size: 1.4rem;
+        padding: 0;
+        height: 100vh;
+        overflow: hidden;
+        padding-top: 8%;
+        padding-bottom: 8%;
+        padding-left: 11%;
+        padding-right: 11%;
+    }
+
+    .info-cards-container {
+        margin: 0 auto;
+        display: grid;
+        height: 70vh;
+        width: 65vw;
+        gap: .5rem;
+        grid-template-columns:  0.394fr 0.219fr 0.355fr;
+        grid-template-rows: 2fr 1fr 1fr; /* ! Part of code having an error causing cards not to increase height */
+        grid-template-areas:
+        "header header skillset"
+        "profession qoute skillset"
+        "profession qoute image";
+    }
+    
+    .introduction {
+        grid-area: header;
+    }
+
+    .skillsets {
+        grid-area: skillset;
+    } 
+
+    .image {
+        /* height: 120px; */
+        grid-area: image;
+    }
+
+    .dream-profession {
+        /* height: 270px; */
+        grid-area: profession;
+    } 
+
+    .short-qoute {
+        /* height: 270px; */
+        border-radius: 0;
+        grid-area: qoute;
+    }
+
+    .navbar {
+        margin: 0 auto;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        max-width: 500px;
+        top: 50px;
+        height: 70px;
+        border-radius: 13px;
+    }
+
+    .navbar ul {
+        font-size: 1.4rem;
+        gap: 4rem;
+    }
+
+    .navigation-stop {
+        height: 0;
+    }
+}
+
+/* Tablets */
 @media (min-width: 700px) and (max-width: 1000px) {
     :root {
         --body-padding: 8%;

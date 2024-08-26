@@ -1,10 +1,9 @@
 
 
 /* * small laptop */
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
     body {
         font-size: 1rem;
-        padding: 0;
         height: 100vh;
         overflow: hidden;
         padding-top: 8%;
@@ -38,17 +37,14 @@
     } 
 
     .image {
-        /* height: 120px; */
         grid-area: image;
     }
 
     .dream-profession {
-        /* height: 270px; */
         grid-area: profession;
     } 
 
     .short-qoute {
-        /* height: 270px; */
         border-radius: 0;
         grid-area: qoute;
     }
@@ -59,7 +55,7 @@
         left: 0;
         right: 0;
         bottom: 0;
-        max-width: 27vw;
+        max-width: 25vw;
         width: auto;
         top: 4vh;
         height: 8vh;
@@ -78,7 +74,7 @@
 }
 
 /* * Tablets */
-@media (min-width: 600px) and (max-width: 1023px) {
+@media (min-width: 500px) and (max-width: 1024px) {
     :root {
         --body-padding: 8%;
     }
@@ -136,11 +132,7 @@
     }
 
     .navbar ul {
-        font-size: 1.5rem;
-        gap: 4rem;
+        font-size: 3vw;
+        gap: 8vw;
     }
-
-   /* .navigation-stop {
-        height: 120px;
-    }  */
 }

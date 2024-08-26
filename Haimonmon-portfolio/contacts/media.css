@@ -1,5 +1,63 @@
+@media (min-width: 1025px) {
+    body {
+        font-size: 1rem;
+        height: 100vh;
+        overflow: hidden;
+        padding-top: 8%;
+        padding-bottom: 1%;
+        padding-left: 11%;
+        padding-right: 11%;
+    }
+
+    .info-cards-container {
+        margin: 0 auto;
+        display: grid;
+        height: 70vh;
+        width: 65vw;
+        gap: .7rem;
+        grid-template-columns:  1.6fr 2.5fr .8fr;
+        grid-template-rows: 2fr 1fr 1fr 0fr; 
+        grid-template-areas:
+        "instagram github header"
+        "instagram linkedin header"
+        "email linkedin header"
+        "navigation-space navigation-space navigation-space"
+        ;
+    }
+
+    .image img {
+        object-fit: cover;
+        object-position: -320px;
+        height: 100%;
+        width: 100%;
+    }
+
+    .navbar {
+        margin: 0 auto;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        max-width: 25vw;
+        width: auto;
+        top: 4vh;
+        height: 8vh;
+        border-radius: 2vh;
+    }
+
+    /* Responsive Typography https://youtu.be/erqRw3E-vn4?si=pWYE4uyBxWE0UZSm */
+    .navbar ul {
+        font-size: clamp(1rem, 2.3vh, 2.5rem);;
+        gap: clamp(1rem, 9vw, 2.5rem);
+    }
+
+    .navigation-stop {
+        height: 0;
+    }
+}
+
 /* * tablet portrait */
-@media (min-width: 700px) and (max-width: 1000px){
+@media (min-width: 500px) and (max-width: 1024px) {
     :root {
         --body-padding: 8%;
     }
@@ -10,61 +68,44 @@
 
     .info-cards-container {
         display: grid;
-        gap: 15px;
+        gap: 10px;
         grid-template-columns: 1fr 1fr;
+        grid-template-rows: .5fr .5fr .2fr .3fr .3fr;
         grid-template-areas: 
         "header header"
-        "github-card linkedin-card"
-        "instagram-card linkedin-card"
-        "instagram-card email-card"
-        "navigation-space navigation-space"
-        ;
+        "github linkedin"
+        "instagram linkedin"
+        "instagram email"
+        "navigation-space navigation-space";
     }
 
     .image {
-        height: 203px;
         border-radius: 15px 15px 0 0;
     }
 
     .image img {
-        object-position: 0 -210px;
-    }
-
-    .github {
-        height: 325px;
+        object-position: 0 -100px;
     }
 
     .instagram {
-        height: 325px;
         border-radius: 0 0 0 15px;
     }
 
-    .linkedin {
-        height: 484px;
-    }
-
     .email {
-        height: 166px;
         border-radius: 0 0 15px 0;
     }
 
     .navbar {
-        left: 21%;
-        right: 21%;
+        left: 20%;
+        right: 20%;
         bottom: 80px;
-        height: 71px;
     }
 
     .navbar ul {
         font-size: 3vw;
         gap: 8vw;
     }
-
-    .navigation-stop {
-        height: 120px;
-    }
 }
+    
 
-/* @media () and () {
 
-} */

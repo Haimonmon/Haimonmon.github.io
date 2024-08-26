@@ -1,52 +1,62 @@
 /* Desktop*/
-@media (min-width: 1001px) {
-    
+@media (min-width: 1025px) {
+    .navbar {
+        margin: 0 auto;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        max-width: 25vw;
+        width: auto;
+        top: 4vh;
+        height: 8vh;
+        border-radius: 2vh;
+    }
+
+    /* Responsive Typography https://youtu.be/erqRw3E-vn4?si=pWYE4uyBxWE0UZSm */
+    .navbar ul {
+        font-size: clamp(1rem, 2.3vh, 2.5rem);;
+        gap: clamp(1rem, 9vw, 2.5rem);
+    }
 }
 
 /* Tablet */
-@media (min-width: 700px) and (max-width: 1000px) {
+@media (min-width: 500px) and (max-width: 1024px) {
     :root {
         --body-padding: 8%;
     }
 
     body {
-        padding-top: 20%;
+        padding-top: 15%;
     }
 
     .project-carousel {
         display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr;
         gap: 30px;
     }
 
     .project-card-container {
-        flex: 1 0 100%;
+        flex: 0 0 100%;
         display: grid;
-        grid-template-columns: 1.8fr 1.5fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1.7fr 1.5fr .5fr;
         grid-template-areas: 
         "image-card image-card"
         "language-card description-card"
         "button description-card"
         ;
-    }
-
-    .languages {
-        height: 264px;
+        height: 60vh;
     }
 
     .project-image {
-        height: 373px;
         border-radius: 15px 15px 0 0;
     }
 
     .project-description {
-        height: 357px;
         border-radius: 0 0 15px 0;
     }
 
     .project-button-link {
-        height: 85px;
         border-radius: 0 0 0px 15px;
     }
 
@@ -60,9 +70,5 @@
     .navbar ul {
         font-size: 3vw;
         gap: 8vw;
-    }
-
-    .navigation-stop {
-        height: 12000px;
     }
 }

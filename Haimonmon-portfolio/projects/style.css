@@ -8,17 +8,21 @@ body {
     font-family: Montserrat,sans-serif;
     margin: 0;
     display: grid;
+    grid-auto-rows: auto 1fr;
     place-items: center;
     padding: var(--body-padding);
+    height: 100vh;
 }
 
 .projects-carousel {
+    top: 90vh;
     display: flex;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     gap: 100px;
     -webkit-overflow-scrolling: touch;
+    width: var(--container-width);
 }
 
 .projects-carousel::-webkit-scrollbar {
@@ -26,9 +30,10 @@ body {
 }
 
 .project-card-container {
-    flex: 1 0 100%;
+    flex: 0 0 100%;
     display: grid;
     grid-template-columns: 1fr;
+    grid-template-rows: .8fr 2.2fr 2fr 1fr;
     grid-template-areas: 
     "language-card"
     "image-card"
@@ -36,9 +41,10 @@ body {
     "button"
     ;
     gap: 10px;
-    width: 100%;
+    width: var(--container-width);
     scroll-snap-align: center;
     background-color: #0F0F0F;
+    height: 75vh;
     overflow: hidden;
 }
 
@@ -48,17 +54,14 @@ body {
     color: #A59C92;
     place-content: center;
     text-align: center;
-    max-width: 100%;
+    
 }
 
 .languages {
-    height: 9vh;
-    border-radius: 10px 10px 0 0;
     grid-area: language-card;
 }
 
 .project-image {
-    height: 25vh;
     display: block;
     object-fit: cover;
     overflow: hidden;
@@ -66,16 +69,14 @@ body {
 }
 
 .project-image img {
-    height: 25vh;
+    object-fit: fill; 
 }
 
 .project-description {
-    height: 22vh;
     grid-area: description-card;
 }
 
 .project-button-link {
-    height: 10vh;
     border-radius: 0 0 10px 10px;
     grid-area: button;
 }

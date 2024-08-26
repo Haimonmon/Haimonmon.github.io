@@ -19,7 +19,7 @@ body {
 .info-cards-container {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 200px 217px 101px 190px 101px 65px;
+    grid-template-rows: 200px 217px 101px 190px 101px 85px;
     grid-template-areas: 
     "header"
     "skillset"

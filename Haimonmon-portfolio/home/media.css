@@ -1,14 +1,14 @@
 
 
-/* small laptop */
-@media (min-width: 1001px) {
+/* * small laptop */
+@media (min-width: 1024px) {
     body {
-        font-size: 1.4rem;
+        font-size: 1rem;
         padding: 0;
         height: 100vh;
         overflow: hidden;
         padding-top: 8%;
-        padding-bottom: 8%;
+        padding-bottom: 1%;
         padding-left: 11%;
         padding-right: 11%;
     }
@@ -20,15 +20,17 @@
         width: 65vw;
         gap: .5rem;
         grid-template-columns:  0.394fr 0.219fr 0.355fr;
-        grid-template-rows: 2fr 1fr 1fr; /* ! Part of code having an error causing cards not to increase height */
+        grid-template-rows: 2fr 1fr 1fr 0fr; 
         grid-template-areas:
         "header header skillset"
         "profession qoute skillset"
-        "profession qoute image";
+        "profession qoute image"
+        "navigation-space navigation-space navigation-space";
     }
     
     .introduction {
         grid-area: header;
+        border-radius: 0;
     }
 
     .skillsets {
@@ -57,15 +59,17 @@
         left: 0;
         right: 0;
         bottom: 0;
-        max-width: 500px;
-        top: 50px;
-        height: 70px;
-        border-radius: 13px;
+        max-width: 27vw;
+        width: auto;
+        top: 4vh;
+        height: 8vh;
+        border-radius: 2vh;
     }
 
+    /* Responsive Typography https://youtu.be/erqRw3E-vn4?si=pWYE4uyBxWE0UZSm */
     .navbar ul {
-        font-size: 1.4rem;
-        gap: 4rem;
+        font-size: clamp(1rem, 2.3vh, 2.5rem);;
+        gap: clamp(1rem, 9vw, 2.5rem);
     }
 
     .navigation-stop {
@@ -73,74 +77,70 @@
     }
 }
 
-/* Tablets */
-@media (min-width: 700px) and (max-width: 1000px) {
+/* * Tablets */
+@media (min-width: 600px) and (max-width: 1023px) {
     :root {
         --body-padding: 8%;
     }
 
     body {
-        padding-top: 20%;
+        padding-top: 14%;
     }
 
     .info-cards-container {
         display: grid;
         gap: 10px;
         grid-template-columns: 2fr 1.8fr;
+        grid-template-rows: 1.6fr .7fr 1.4fr .7fr .9fr;
         grid-template-areas: 
         "header header"
-        "qoute-card skillset-card"
-        "profession-card skillset-card"
-        "profession-card image-card"
+        "qoute skillset"
+        "profession skillset"
+        "profession image"
         "navigation-space navigation-space"
         ;
     }
 
     .introduction {
-        height: 248px;
         border-radius: 15px 15px 0px 0px;
     }
     
-    .skillsets {
+    /* .skillsets {
+        
         height: 365px;
-    }
+    } */
     
     .image {
-        height: 102px;
         overflow: hidden;
         border-radius: 0 0 15px 0;  
     }
     
     .image img {
-        height: auto;
         display: block;
         object-fit: cover;
         object-position: 0px 0px;
     }
     
     .dream-profession {
-        height: 342px;
         border-radius: 0 0 0 15px;
     }
     
     .short-qoute {
-        height: 126px;
         border-radius: 0;
     }
 
     .navbar {
-        left: 21%;
-        right: 21%;
+        left: 20%;
+        right: 20%;
         bottom: 80px;
-        height: 71px;
     }
 
     .navbar ul {
-        font-size: 3vw;
-        gap: 8vw;
+        font-size: 1.5rem;
+        gap: 4rem;
     }
 
-    .navigation-stop {
+   /* .navigation-stop {
         height: 120px;
-    }
+    }  */
 }

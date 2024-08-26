@@ -19,12 +19,13 @@ body {
 .info-cards-container {
     display: grid;
     grid-template-columns: 1fr;
+    grid-template-rows: 200px 217px 101px 190px 101px 65px;
     grid-template-areas: 
     "header"
-    "skillset-card"
-    "image-card"
-    "profession-card"
-    "qoute-card"
+    "skillset"
+    "image"
+    "profession"
+    "qoute"
     "navigation-space"
     ;
     gap: 10px;
@@ -32,46 +33,40 @@ body {
     overflow-y: auto;
 }
 
-.info-cards-container div { /* ! alalahanin mo manlang bug mo dito!! */
+.info-cards-container div { 
     background-color: #1D1D26;
     color: #A59C92;
     place-content: center;
     text-align: center;
 }
 
-.introduction { /* ! Remove the heights and add grid-template-rows*/
-    /* height: 193px; */
+.introduction { 
     border-radius: 10px 10px 0px 0px;
     grid-area: header;
 }
 
 .skillsets {
-    /* height: 217px; */
-    grid-area: skillset-card;
+    grid-area: skillset;
 }
 
 .image {
-    /* height: 101px; */
     overflow: hidden;
-    grid-area: image-card;
+    grid-area: image;
 }
 
 .image img {
     width: 100%;
-    /* height: auto; */
     display: block;
     object-fit: cover;
     object-position: 0px 0px;
 }
 
 .dream-profession {
-    /* height: 190px; */
-    grid-area: profession-card;
+    grid-area: profession;
 }
 
 .short-qoute {
-    /* height: 101px; */
     border-radius: 0px 0px 10px 10px;
-    grid-area: qoute-card;
+    grid-area: qoute;
 }
 

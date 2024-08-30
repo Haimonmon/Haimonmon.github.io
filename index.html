@@ -15,6 +15,8 @@
             height: 100vh;
             margin: 0;
             font-family: Montserrat;
+            font-size: 3rem;
+            font-weight: 500;
         }
 
         .welcome {
@@ -24,12 +26,21 @@
             text-align: center; 
         }
 
-        #work {
+        #highlight {
             color: #ABFC00;
         }
 
         #go-to {
             list-style-type: none;
+            text-decoration: none;
+            font-size: 2rem;
+            color: #B8AEA2;
+            opacity: .5;
+            transition: opacity 0.5s ease;
+        }
+
+        #go-to:hover {
+            opacity: 1;
         }
 
     </style>
@@ -37,9 +48,8 @@
 </head>
 <body>
     <header class="welcome">
-        <h1>🚧</h1>
-        <p>Portfolio is still on <span id="work">work</span><br> .  .  .</p>
-        <a id="go-to" href="./Haimonmon-portfolio/home/index.html">proceed anyway</a>
+        <p>Hello <span id="highlight">World</span></p>
+        <a id="go-to" href="./Haimonmon-portfolio/home/index.html">proceed</a>
     </header>
 </body>
 </html>

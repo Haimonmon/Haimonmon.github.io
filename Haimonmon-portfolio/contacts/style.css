@@ -30,7 +30,7 @@ body {
     ;
     gap: 10px;
     width: var(--container-width);
-    overflow: auto;
+    overflow: visible;
 }
 
 .info-cards-container div {
@@ -38,6 +38,13 @@ body {
     color: #A59C92;
     place-content: center;
     text-align: center;
+    overflow: hidden;
+    transition: box-shadow .7s ease-in-out;
+    
+}
+
+.info-cards-container div:hover {
+    box-shadow: 0 0 50px rgb(26, 49, 93) ;
 }
 
 .image {
@@ -55,20 +62,78 @@ body {
 
 .github {
     grid-area: github;
+    padding: 5% 10% 10% 10%;
+}
+
+.github img {
+    object-fit: cover;
+    width: 5rem;
+    margin-bottom: .1rem;
+}
+
+.github h2 {
+    margin-top: 3% ;
+    margin-bottom: 3%;
+    font-weight: 450;
+}
+
+.github p {
+    margin-top: 1%;
+    font-weight: 300;
 }
 
 .instagram {
     grid-area: instagram;
+    padding: 5% 10% 10% 10%;
+    position: relative;
+}
+
+.instagram h2 {
+    margin-top: 3% ;
+    margin-bottom: 3%;
+    font-weight: 450;
+}
+
+.instagram p {
+    margin-top: 1%;
+    font-weight: 300;
+}
+
+.instagram #insta-save-icon {
+    position: absolute; 
+    top: 0;
+    right: 2em; 
+    width: 1.7rem;
+}
+
+.instagram #insta-logo-icon {
+    width: 5rem;
 }
 
 .linkedin {
     grid-area: linkedin;
+    padding: 10%;
+}
+
+.linkedin img {
+    object-fit: cover;
+    width: 5.2rem;
 }
 
 .email {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
     border-radius: 0px 0px 10px 10px;
     grid-area: email;
+    padding: 5%;
 }
+
+.email img {
+    width: 2.8rem;
+    height: 3rem;
+}
+
 
 
 

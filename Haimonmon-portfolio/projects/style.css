@@ -20,9 +20,9 @@ body {
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
-    gap: 100px;
     -webkit-overflow-scrolling: touch;
     width: var(--container-width);
+    gap: 100px;
 }
 
 .projects-carousel::-webkit-scrollbar {
@@ -45,7 +45,7 @@ body {
     scroll-snap-align: center;
     background-color: #0F0F0F;
     height: 75vh;
-    overflow: hidden;
+    overflow: visible;
 }
 
 
@@ -54,31 +54,77 @@ body {
     color: #A59C92;
     place-content: center;
     text-align: center;
-    
+    overflow: hidden;
+    position: relative;
+    transition: box-shadow 0.5s ease-in-out; 
+}
+
+.project-card-container div:hover {
+    box-shadow: 5px 5px 5px rgba(0, 123, 255, 0.7) !important;
 }
 
 .languages {
     grid-area: language-card;
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    padding: 1%;
+    background-color: #1E1E2E !important;
+}
+
+.languages img {
+    width: 2rem;
+}
+
+.highlight-text {
+    color: #ABFC00;
 }
 
 .project-image {
     display: block;
-    object-fit: cover;
     overflow: hidden;
     grid-area: image-card;
 }
 
 .project-image img {
-    object-fit: fill; 
+    object-fit: cover;
+    width: 100%;
+    object-position: 0 1vh;
+    height: 100%;
 }
 
 .project-description {
     grid-area: description-card;
+    padding: 0 11% 0 11%;
+}
+
+.project-description h2 {
+    font-weight: 400;
+    font-size: 1.1rem;
+}
+
+.project-description p {
+    font-weight: 280;
+    font-size: .9rem;
+    word-wrap: 1rem;
 }
 
 .project-button-link {
-    border-radius: 0 0 10px 10px;
     grid-area: button;
+    padding: 10%;
+    display: flex;
+    align-items: center;
+    gap: .8em;
+    background-color: #1E1E2E !important;
+
+}
+
+.project-button-link img {
+    width: 1.2rem;
+}
+
+.project-button-link p {
+    font-size: .9rem;
 }
 
 

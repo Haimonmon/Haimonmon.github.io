@@ -30,7 +30,10 @@ body {
     ;
     gap: 10px;
     width: var(--container-width);
-    overflow-y: auto;
+}
+
+.highlight-text {
+    color: #97E418;
 }
 
 .info-cards-container div { 
@@ -38,15 +41,98 @@ body {
     color: #A59C92;
     place-content: center;
     text-align: center;
+    transition: box-shadow 0.5s ease-in-out; 
 }
 
-.introduction { 
-    border-radius: 10px 10px 0px 0px;
+.info-cards-container div:hover {
+    box-shadow: 0 0 50px rgba(26, 49, 93) !important;
+}
+
+.introduction {
     grid-area: header;
+    position: relative;
+    padding: 0 4% 0 4%;
+    overflow: hidden;
+    background-image: url('https://res.cloudinary.com/dhisbk3b2/image/upload/v1725043803/dzatcrjldahedpa9iwga.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.introduction #star-icon {
+    top: 2%;
+    right: 1%;
+    position: absolute;
+    width: 2rem;
+}
+
+.introduction h1 {
+    text-align: left;
+    margin-top: 10%;
+    margin-bottom: 1%;
+    font-weight: 390;
+    font-size: 1.3rem;
+}
+
+.introduction h2 {
+    text-align: left;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    font-weight: 300;
+    font-size: 1rem;
+}
+
+.introduction p {
+    text-align: left;
+    margin-top: 1%;
+    font-weight: 300;
+    font-size: 1rem;
 }
 
 .skillsets {
     grid-area: skillset;
+    position: relative;
+    padding: 0 8% 0 8%;
+    overflow: hidden;
+}
+
+.skillsets header img {
+    width: 1.9rem;
+}
+
+.skillsets header p {
+    font-weight: 300;
+    font-size: .9rem;
+}
+
+.skillsets .skills {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.7rem;
+    flex-wrap: wrap;
+    margin-top: 15%;
+}
+
+.skillsets .skills:hover {
+    box-shadow: 0 0 0 rgba(26, 49, 93) !important;
+     
+}
+
+.skillsets .skills img {
+    width: 2.2rem;
+    opacity: .6;
+}
+
+.skillsets header {
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 10%;
+    right: 10%;
+    margin-bottom: 90%;
 }
 
 .image {
@@ -63,10 +149,47 @@ body {
 
 .dream-profession {
     grid-area: profession;
+    overflow: hidden;
+    padding: 0 4% 0 4%;
+    position: relative;
+}
+
+.dream-profession h3 {
+    font-weight: 380;
+    font-size: .9rem;
+    margin-top: 12%;
+}
+
+.dream-profession p {
+    font-weight: 300;
+    font-size: .8rem;
+}
+
+.dream-profession header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 10%;
+    right: 10%;
+}
+
+.dream-profession header p {
+    font-weight: 300;
+    font-size: 1rem;
+}
+
+.dream-profession header img {
+    width: 3rem;
 }
 
 .short-qoute {
     border-radius: 0px 0px 10px 10px;
     grid-area: qoute;
+    padding: 0 15% 0 15%;
+    font-size: .9rem;
+    font-weight: 300;
+    background-color: #1E1E2E!important; 
 }
 

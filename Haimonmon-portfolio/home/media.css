@@ -15,8 +15,12 @@
     .info-cards-container {
         margin: 0 auto;
         display: grid;
-        height: 70vh;
-        width: 65vw;
+        min-height: 300px;
+        max-height: 500px;
+        min-width: 800px;
+        max-width: 1000px;
+        /* height: 70vh;
+        width: 65vw; */
         gap: .5rem;
         grid-template-columns:  0.394fr 0.219fr 0.355fr;
         grid-template-rows: 2fr 1fr 1fr 0fr; 
@@ -26,14 +30,95 @@
         "profession qoute image"
         "navigation-space navigation-space navigation-space";
     }
-    
+
     .introduction {
-        grid-area: header;
-        border-radius: 0;
+        background-position: center 40%;
+    }
+    
+    
+    .introduction h1 {
+        font-size: 2rem;
     }
 
+    .introduction h2 {
+        font-size: 1.2rem;
+    }
+
+    .introduction p {
+        font-size: 1.2rem;
+    }
+
+    .introduction #star-icon {
+        top: 2%;
+        right: 1%;
+        position: absolute;
+        width: 2rem;
+    }
+    
     .skillsets {
         grid-area: skillset;
+        position: relative;
+        padding: 0 8% 0 8%;
+        overflow: hidden;
+    }
+    
+    
+    .skillsets header img {
+        width: 2.1rem;
+    }
+    
+    .skillsets header p {
+        font-weight: 300;
+        font-size: 1.2rem;
+    }
+   
+    .skillsets .skills {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2.7rem;
+        flex-wrap: wrap;
+        margin-bottom: 70px;
+    }
+    
+    
+    .skillsets .skills img {
+        width: 2.6rem;
+    }
+    
+    .short-qoute {
+        grid-area: qoute;
+        padding: 0 17% 0 17%;
+        font-size: 1rem;
+        font-weight: 300;
+        background-color: #1E1E2E!important; 
+    }
+
+    .dream-profession {
+        grid-area: profession;
+        overflow: hidden;
+        padding: 0 10% 0 10%;
+        position: relative;
+    }
+
+    .dream-profession h3 {
+        font-weight: 380;
+        font-size: 1.2rem;
+        margin-bottom: 1px;
+    }
+
+    .dream-profession p {
+        font-weight: 300;
+        font-size: .9rem;
+    }
+
+    .dream-profession header p {
+        font-weight: 300;
+        font-size: 1.2rem;
+    }
+
+    .dream-profession header img {
+        width: 3rem;
     } 
 
     .image {

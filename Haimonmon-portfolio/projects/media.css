@@ -18,7 +18,10 @@
     .project-card-container {
         margin: 0 auto;
         display: grid;
-        height: 70vh;
+        min-height: 300px;
+        max-height: 500px;
+        min-width: 700px;
+        max-width: 1000px;
         gap: .5rem;
         grid-template-columns:  1.5fr 2fr;
         grid-template-rows: 1.7fr 1fr .5fr; 
@@ -28,7 +31,7 @@
         "button description-card"
         ;
     }
-    
+
     .navbar {
         margin: 0 auto;
         position: absolute;
@@ -41,6 +44,8 @@
         height: 8vh;
         border-radius: 2vh;
     }
+
+    
 
     /* Responsive Typography https://youtu.be/erqRw3E-vn4?si=pWYE4uyBxWE0UZSm */
     .navbar ul {

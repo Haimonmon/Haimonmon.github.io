@@ -1,3 +1,4 @@
+/* * Desktop */
 @media (min-width: 1025px) {
     body {
         font-size: 1rem;
@@ -12,8 +13,12 @@
     .info-cards-container {
         margin: 0 auto;
         display: grid;
-        height: 70vh;
-        width: 65vw;
+        min-height: 300px;
+        max-height: 500px;
+        min-width: 800px;
+        max-width: 1000px;
+        /* height: 70vh;
+        width: 65vw; */
         gap: .7rem;
         grid-template-columns:  1.6fr 2.5fr .8fr;
         grid-template-rows: 2fr 1fr 1fr 0fr; 
@@ -38,17 +43,25 @@
         left: 0;
         right: 0;
         bottom: 0;
-        max-width: 25vw;
-        width: auto;
+        min-width: 400px;
+        width: 25vw;
         top: 4vh;
         height: 8vh;
         border-radius: 2vh;
+    }
+    
+    .linkedin img {
+        width: 5rem;
+    }
+
+    .instagram #insta-save-icon {
+        width: 2.3rem;
     }
 
     /* Responsive Typography https://youtu.be/erqRw3E-vn4?si=pWYE4uyBxWE0UZSm */
     .navbar ul {
         font-size: clamp(1rem, 2.3vh, 2.5rem);;
-        gap: clamp(1rem, 9vw, 2.5rem);
+        gap: clamp(2rem, 9vw, 2.5rem);
     }
 
     .navigation-stop {
@@ -89,6 +102,10 @@
 
     .instagram {
         border-radius: 0 0 0 15px;
+    }
+
+    .linkedin img {
+        width: 6.5rem;
     }
 
     .email {

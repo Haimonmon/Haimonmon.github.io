@@ -1,6 +1,6 @@
 :root {
     --container-width: 100%;
-    --body-padding: 4%;
+    --body-padding: 5%;
 }
 
 .navbar {
@@ -10,6 +10,7 @@
     right: var(--body-padding); 
     background-color: #0F0F0F;
     border-radius: 10px;
+    
     height: 50px;
     border: 1px solid #8A837C;
     display: flex;
@@ -17,7 +18,6 @@
     align-items: center;
     overflow-x: hidden;
 }
-
 
 
 .navbar ul {
@@ -33,15 +33,22 @@
 .navbar a {
     text-decoration: none;
     color: #B8AEA2;
+    transition: opacity 0.3s ease;
 }
+
 
 .navbar a:focus {
     outline: none;
 }
 
+.navbar:hover a {
+    opacity: 50%;
+}
+
 .navbar a:hover {
     opacity: 100%;
 }
+
 
 .home-button {
     opacity: 50%;
@@ -53,4 +60,8 @@
 
 .contact-button {
     opacity: 50%;
+}
+
+.navigational-stop {
+    background-color: #0F0F0F !important;
 }

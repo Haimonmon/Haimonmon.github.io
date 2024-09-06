@@ -8,46 +8,49 @@ body {
     font-family: Montserrat,sans-serif;
     margin: 0;
     display: grid;
-    grid-auto-rows: auto 1fr;
     place-items: center;
     padding: var(--body-padding);
     height: 100vh;
 }
 
 .projects-carousel {
-    top: 90vh;
+    position: relative;
+    scroll-behavior: smooth;
+}
+
+.projects-carousel .projects {
     display: flex;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
     width: var(--container-width);
-    gap: 100px;
+    gap: 10rem;
+    height: 600px;
 }
 
-.projects-carousel::-webkit-scrollbar {
+.projects-carousel .projects::-webkit-scrollbar {
     display: none;
 }
 
 .project-card-container {
-    flex: 0 0 100%;
+    flex: 1 0 100%;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: .8fr 2.2fr 2fr 1fr;
+    grid-template-rows: .8fr 2.2fr 2fr 1fr 1fr;
     grid-template-areas: 
     "language-card"
     "image-card"
     "description-card"
     "button"
+    "navigation-space"
     ;
     gap: 10px;
     width: var(--container-width);
     scroll-snap-align: center;
     background-color: #0F0F0F;
-    height: 75vh;
     overflow: visible;
 }
-
 
 .project-card-container div {
     background-color: #1D1D26;
@@ -56,11 +59,10 @@ body {
     text-align: center;
     overflow: hidden;
     position: relative;
-    transition: box-shadow 0.5s ease-in-out; 
 }
 
-.project-card-container div:hover {
-    box-shadow: 5px 5px 5px rgba(0, 123, 255, 0.7) !important;
+::-webkit-scrollbar {
+    display: none;
 }
 
 .languages {
@@ -89,7 +91,6 @@ body {
 .project-image img {
     object-fit: cover;
     width: 100%;
-    object-position: 0 1vh;
     height: 100%;
 }
 
@@ -116,7 +117,6 @@ body {
     align-items: center;
     gap: .8em;
     background-color: #1E1E2E !important;
-
 }
 
 .project-button-link img {
@@ -126,5 +126,33 @@ body {
 .project-button-link p {
     font-size: .9rem;
 }
+
+.navigational-stop {
+    grid-area: navigation-space;
+}
+
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 12rem;
+    left: 42%;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #A59C92;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.dot:hover {
+    background-color: #ABFC00;
+}
+
+
 
 

@@ -1,9 +1,9 @@
 /* Desktop*/
 @media (min-width: 1025px) {
+    
     body {
         font-size: 1rem;
         height: 100vh;
-        overflow: hidden;
         padding-top: 8%;
         padding-bottom: 1%;
         padding-left: 11%;
@@ -11,15 +11,17 @@
         grid-auto-rows: auto 0;
     }
 
-    .projects-carousel {
-        width: 60vw;
+    .projects {
+        max-width: 900px;
+        min-width: 800px;
+        min-height: 400px;
+        max-height: 500px;
     }
 
     .project-card-container {
         margin: 0 auto;
         display: grid;
-        min-height: 300px;
-        max-height: 500px;
+        height: 500px;
         min-width: 700px;
         max-width: 1000px;
         gap: .5rem;
@@ -38,24 +40,30 @@
         left: 0;
         right: 0;
         bottom: 0;
-        max-width: 25vw;
+        min-width: 100px;
+        max-width: 400px;
         width: auto;
+        height: auto;
+        min-height: 20px;
+        max-height: 59px;
         top: 4vh;
-        height: 8vh;
-        border-radius: 2vh;
+        border-radius: .9rem;
     }
 
-    
+    .carousel-dots {
+        left: 66.5%;
+        bottom: 2rem;
+        gap: .5rem;
+    }
 
-    /* Responsive Typography https://youtu.be/erqRw3E-vn4?si=pWYE4uyBxWE0UZSm */
     .navbar ul {
-        font-size: clamp(1rem, 2.3vh, 2.5rem);;
-        gap: clamp(1rem, 9vw, 2.5rem);
+        font-size: 1rem;
+        gap: 2.7rem;
     }
 }
 
 /* Tablet */
-@media (min-width: 500px) and (max-width: 1024px) {
+@media (min-width: 560px) and (max-width: 1024px) {
     :root {
         --body-padding: 8%;
     }
@@ -64,22 +72,24 @@
         padding-top: 15%;
     }
 
-    .project-carousel {
-        display: grid;
-        gap: 30px;
+    .projects-carousel .projects{
+        max-height: 800px;
+        min-height: 700px;
+        height: auto;
     }
 
     .project-card-container {
         flex: 0 0 100%;
         display: grid;
+        max-height: 900px;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1.7fr 1.5fr .5fr;
-        grid-template-areas: 
+        grid-template-rows: 1.7fr 1.5fr .5fr 1fr;
+        grid-template-areas:
         "image-card image-card"
         "language-card description-card"
         "button description-card"
+        "navigation-space navigation-space"
         ;
-        height: 60vh;
     }
 
     .project-image {
@@ -95,10 +105,15 @@
     }
 
     .navbar {
-        left: 21%;
-        right: 21%;
+        left: 20%;
+        right: 20%;
         bottom: 80px;
         height: 71px;
+    }
+
+    .carousel-dots {
+        left: 71.5%;
+        bottom: 12rem;
     }
 
     .navbar ul {

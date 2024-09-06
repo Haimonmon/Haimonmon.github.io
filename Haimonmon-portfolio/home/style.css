@@ -120,6 +120,8 @@ body {
 
 .skillsets .skills img {
     width: 2.2rem;
+    min-width: 1.2rem;
+    max-width: 300px;
     opacity: .6;
 }
 

@@ -43,11 +43,14 @@
         left: 0;
         right: 0;
         bottom: 0;
-        min-width: 400px;
-        width: 25vw;
+        min-width: 100px;
+        max-width: 400px;
+        width: auto;
+        height: auto;
+        min-height: 20px;
+        max-height: 59px;
         top: 4vh;
-        height: 8vh;
-        border-radius: 2vh;
+        border-radius: .9rem;
     }
     
     .linkedin img {
@@ -60,8 +63,8 @@
 
     /* Responsive Typography https://youtu.be/erqRw3E-vn4?si=pWYE4uyBxWE0UZSm */
     .navbar ul {
-        font-size: clamp(1rem, 2.3vh, 2.5rem);;
-        gap: clamp(2rem, 9vw, 2.5rem);
+        font-size: 1rem;
+        gap: 2.7rem;
     }
 
     .navigation-stop {
@@ -70,7 +73,7 @@
 }
 
 /* * tablet portrait */
-@media (min-width: 500px) and (max-width: 1024px) {
+@media (min-width: 560px) and (max-width: 1024px) {
     :root {
         --body-padding: 8%;
     }

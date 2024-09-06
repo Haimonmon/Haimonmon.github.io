@@ -10,7 +10,7 @@
     right: var(--body-padding); 
     background-color: #0F0F0F;
     border-radius: 10px;
-    height: 7vh;
+    height: 50px;
     border: 1px solid #8A837C;
     display: flex;
     justify-content: center;
@@ -30,10 +30,15 @@
 .navbar a {
     text-decoration: none;
     color: #B8AEA2;
+    transition: opacity 0.3s ease;
 }
 
 .navbar a:focus {
     outline: none;
+}
+
+.navbar:hover a {
+    opacity: 50%;
 }
 
 .navbar a:hover {

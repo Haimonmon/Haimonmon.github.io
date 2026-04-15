@@ -3,3 +3,10 @@
     padding: 0;
 }
 
+body.official-page {
+    background-color: #12121C;
+}
+
+body.maintenance-page {
+    background-color: #0000A0;
+}

@@ -1,4 +1,3 @@
-import React from "react";
 import { createRoot, type Root } from "react-dom/client";
 
 import App from "./app";

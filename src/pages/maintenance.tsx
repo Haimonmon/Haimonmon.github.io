@@ -38,14 +38,14 @@ export default function MaintenancePage(): JSX.Element {
         // console.log("IS MOBILE?: ", isMobile)
         if (!isMobile) return
 
-        window.open("/resume/DeCastroVinceCarlo.pdf", "_blank");
+        window.open("public/resume/DeCastroVinceCarlo.pdf", "_blank");
     }
 
     // * Redirect guest to my pdf resume for desktop
     const goToResumeDesktop = (): void => {
         if (isMobile) return
 
-        window.open("/resume/DeCastroVinceCarlo.pdf", "_blank");
+        window.open("public/resume/DeCastroVinceCarlo.pdf", "_blank");
     }
 
     // * Redirect guest to my github profile page

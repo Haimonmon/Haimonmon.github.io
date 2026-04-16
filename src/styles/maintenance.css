@@ -63,7 +63,7 @@
     text-decoration: underline;
 }
 
-#maintenance-github-link, .desktop {
+#maintenance-github-link {
     cursor: pointer;
 }
 

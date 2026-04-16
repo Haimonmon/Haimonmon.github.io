@@ -14,6 +14,9 @@ body.official-page {
 
 body.maintenance-page {
     background-color: #0000A0;
+}
+
+body.mobile {
     cursor: pointer;
 }
 

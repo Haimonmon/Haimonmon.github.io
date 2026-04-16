@@ -3,53 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <style>
-        body {
-            background-color: #0F0F0F;
-            display: flex;
-            justify-content: center; /* Centers horizontally */
-            align-items: center; /* Centers vertically */
-            height: 100vh;
-            margin: 0;
-            font-family: Montserrat;
-            font-size: 3rem;
-            font-weight: 500;
-        }
-
-        .welcome {
-            width: 500px;
-            height: 170px;
-            color: #B8AEA2;
-            text-align: center; 
-        }
-
-        #highlight {
-            color: #ABFC00;
-        }
-
-        #go-to {
-            list-style-type: none;
-            text-decoration: none;
-            font-size: 2rem;
-            color: #B8AEA2;
-            opacity: .5;
-            transition: opacity 0.5s ease;
-        }
-
-        #go-to:hover {
-            opacity: 1;
-        }
-
-    </style>
-    <title>Vince</title>
+    <title>Just Vince.</title>
+    <link rel="icon" href="public/favicon.png">
+    <link rel="stylesheet" href="src/styles/home.css">
+    <link rel="stylesheet" href="src/styles/public.css">
+    <link rel="stylesheet" href="src/styles/maintenance.css">
 </head>
 <body>
-    <header class="welcome">
-        <p>Hello <span id="highlight">World</span></p>
-        <a id="go-to" href="./Haimonmon-portfolio/home/index.html">proceed</a>
-    </header>
+    <div id="root"></div>
+    <script type="module" src="src/main.tsx"></script>
 </body>
 </html>

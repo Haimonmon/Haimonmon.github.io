@@ -1,15 +1,15 @@
-import { type JSX, useLayoutEffect } from "react";
+import { type JSX, useEffect } from "react";
 
 /**
  * Provides the full portfolio contents
- * @returns JSX.Element
+ * @returns JSX Element
  */
 const HomePage = (): JSX.Element => {
-    useLayoutEffect(() => {
+    useEffect(() => {
         document.body.className = "official-page";
     }, []);
 
-    return <h1>Official Page</h1>
+    return <h1 id="testing-official">Official Page</h1>
 };
 
 export default HomePage;

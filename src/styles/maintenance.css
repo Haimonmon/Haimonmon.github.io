@@ -63,7 +63,11 @@
     text-decoration: underline;
 }
 
-#maintenance-github-link {
+#maintenance-github-link, .desktop {
+    cursor: pointer;
+}
+
+#resume-message-text {
     cursor: pointer;
 }
 
@@ -140,7 +144,6 @@
         margin-bottom: 2.93vw;
     }
 
-    
     .maintenance-container #stop-code {
         margin-top: 1.465vw;
         margin-bottom: 1.465vw;
@@ -160,3 +163,40 @@
         margin-top: 10vw;
     }
 }
+
+/* * Large Desktop */
+@media screen and (min-width: 1440px) {
+    .maintenance-container p, li, a {
+        font-size: 1.25vw;
+    }
+
+    .maintenance-container .error-title-container h5 {
+        font-size: 1.389vw;
+        width: 8.958vw;
+        height: 2.083vw;
+    }
+
+    .error-title-container {
+        margin-bottom: 2.083vw;
+    }
+
+    .maintenance-container #stop-code {
+        margin-top: 1.042vw;
+        margin-bottom: 1.042vw;
+    }
+
+    .maintenance-container li {
+        margin-bottom: 2vw;
+    }
+
+    .maintenance-container ul {
+        margin-bottom: 3.125vw;
+    }
+
+    .maintenance-container {
+        width: 48.056vw;
+        height: 15.417vw;
+        margin-top: 10vw;
+    }
+}
+

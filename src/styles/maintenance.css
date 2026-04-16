@@ -1,0 +1,162 @@
+.maintenance-container {
+    width: 81.25vw;
+    /* max-width: 408px; */
+    /* height: 282px; */
+    margin-top: 40vw;
+    margin-bottom: 20vw;
+}
+
+.error-title-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 9.375vw;
+}
+
+.maintenance-container .error-title-container h5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'BSOD Font';
+    font-size: 5vw;
+    height: 6.875vw;
+    width: 32.813vw;
+    color: #0000A0;
+    background-color: #A9ACD7;
+}
+
+.maintenance-container p, li, a {
+    font-family: 'BSOD Font';
+    color: #A9ACD7;
+    font-size: 4.375vw;
+}
+
+.maintenance-container p {
+    text-align: justify;
+}
+
+.maintenance-container li {
+    margin-bottom: 6.25vw;
+    list-style-type: none;
+}
+
+.maintenance-container ul {
+    margin-bottom: 7.813vw;
+}
+
+.maintenance-container #stop-code {
+    margin-top: 3.125vw;
+    margin-bottom: 4.688vw;
+}
+
+#resume-anchor-link, #github-anchor-link {
+    text-decoration: none;
+}
+
+.clickable-area {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#fake-anchor-github-link {
+    text-decoration: underline;
+}
+
+#maintenance-github-link {
+    cursor: pointer;
+}
+
+#underline-cursor {
+    animation: blinker 1.5s infinite;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
+
+
+/* * Tablet */
+@media screen and (min-width: 500px){
+    .maintenance-container p, li, a {
+        font-size: 2.344vw;
+    }
+
+    .maintenance-container .error-title-container h5 {
+        font-size: 2.604vw;
+        width: 16.797vw;
+        height: 3.906vw;
+    }
+
+    .error-title-container {
+        margin-bottom: 3.906vw;
+    }
+
+    
+    .maintenance-container #stop-code {
+        margin-top: 1.953vw;
+        margin-bottom: 1.953vw;
+    }
+
+    .maintenance-container li {
+        margin-bottom: 2vw;
+    }
+
+    .maintenance-container ul {
+        margin-bottom: 3.255vw;
+    }
+
+    .clickable-area {
+        width: 100%;
+    }
+
+    .maintenance-container {
+        width: 64.844vw;
+        height: 36.719vw;
+        margin-top: 20vw;
+    }
+
+    #resume-message {
+        text-align: center;
+    }
+}
+
+
+/* * Small Desktop */
+@media screen and (min-width: 900px) {
+    .maintenance-container p, li, a {
+        font-size: 1.758vw;
+    }
+
+    .maintenance-container .error-title-container h5 {
+        font-size: 1.953vw;
+        width: 12.598vw;
+        height: 2.93vw;
+    }
+
+    .error-title-container {
+        margin-bottom: 2.93vw;
+    }
+
+    
+    .maintenance-container #stop-code {
+        margin-top: 1.465vw;
+        margin-bottom: 1.465vw;
+    }
+
+    .maintenance-container li {
+        margin-bottom: 2vw;
+    }
+
+    .maintenance-container ul {
+        margin-bottom: 2.441vw;
+    }
+
+    .maintenance-container {
+        width: 67.578vw;
+        height: 21.68vw;
+        margin-top: 10vw;
+    }
+}

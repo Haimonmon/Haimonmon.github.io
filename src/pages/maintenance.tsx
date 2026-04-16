@@ -33,6 +33,10 @@ export default function MaintenancePage(): JSX.Element {
         return () => { window.removeEventListener('keydown', handleAllKeyDown)}
     }, [])
 
+    useEffect(() => {
+        document.body.classList.add(isMobile ? 'mobile': 'desktop')
+    }, [isMobile])
+
     // * Redirect guest to my pdf resume for mobile
     const goToResumeMobile = (): void => {
         // console.log("IS MOBILE?: ", isMobile)

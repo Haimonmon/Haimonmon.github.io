@@ -6,8 +6,8 @@ import { type JSX, useEffect } from "react";
  */
 export default function HomePage(): JSX.Element {
     useEffect(() => {
-        document.body.className = "official-page";
+        document.body.className = "bg-dark-coded";
     }, []);
 
-    return <h1 id="testing-official">Official Page</h1>
+    return <h1 id="testing-official" className="text-dark-coded">Official Page</h1>
 };

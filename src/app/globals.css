@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@theme {
+    --breakpoint-*: initial;
+    --color-*: initial;
+    
+
+    /* Palletes */
+    --color-dark-coded: #0A1720;
+    --color-white-coded: #DFE3EE;
+    --color-brown-coded: #C77B41;
+    --color-yellow-coded: #DDE367;
+    --color-orange-coded: #F17957;
+    --color-purple-coded: #8269C7;
+    --color-blue-coded: #46BB9E;
+    --color-blue-bsod: #0000A0;
+    --color-white-bsod: #A9ACD7;
+
+    /* Device Breakpoints */
+    --breakpoint-tablet: 500px;
+    --breakpoint-small-desktop: 900px;
+    --breakpoint-large-desktop: 1440px;
+}
+
+@layer base {
+    * {
+        margin: 0;
+        padding: 0;
+        line-height: normal;
+    }
+
+    body, html {
+        height: 100%;
+    }
+
+    @font-face {
+        font-family: "BSOD Font";
+        src: url(/fonts/Perfect.DOS.VGA.437.ttf);
+    }
+
+    @font-face {
+        font-family: 'Pixel Code';
+        src: url(../../public/fonts/PixelCode-Medium.ttf);
+    }
+}

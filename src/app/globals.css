@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+@keyframes blinker {
+  50% { opacity: 0; }
+}
+
 @theme {
     --breakpoint-*: initial;
     --color-*: initial;
@@ -20,6 +24,9 @@
     --breakpoint-tablet: 500px;
     --breakpoint-small-desktop: 900px;
     --breakpoint-large-desktop: 1440px;
+
+    /* Animations */
+    --animate-blinker: blinker 1.0s infinite;
 }
 
 @layer base {

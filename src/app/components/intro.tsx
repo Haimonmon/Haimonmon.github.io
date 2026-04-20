@@ -7,8 +7,7 @@ let isShown: boolean = false;
  * Intro component, this only shows at the start of the website
  * @returns React jsx element
  */
-export default function Intro(): JSX.Element {
-    const message: string = "Hello World;"
+export default function Intro(props: {message: string, disable: boolean}): JSX.Element {
 
     const [isClosed, setClosed] = useState<boolean>(false);
     const [index, setIndex] = useState<number>(0);
@@ -19,7 +18,7 @@ export default function Intro(): JSX.Element {
         let timeout: NodeJS.Timeout;
 
         const type = (i = 0) => {
-            if (i > message.length) {
+            if (i > props.message.length) {
                 setTyping(false);
                 return;
             }
@@ -28,7 +27,13 @@ export default function Intro(): JSX.Element {
 
             timeout = setTimeout((): void => {
                 type(i + 1);
-            }, Math.random() * 50 + 45);
+            }, props.disable? 0 : Math.random() * 50 + 45);
+        }
+
+        if (props.disable) {
+            setIndex(props.message.length)
+            type();
+            return
         }
 
         // * 1. Fast Typing effect
@@ -48,8 +53,8 @@ export default function Intro(): JSX.Element {
 
     return (
         <div className={`${isClosed ? '[clip-path:inset(0_0_100%_0)]' : '[clip-path:inset(0_0_0_0)]'} transition-[clip-path] duration-2000 ease-in-out w-full h-full top-0 bg-dark-intro absolute visible justify-center flex`}>
-            <p className='text-[1.3rem]  text-white-coded font-[Fira_Code] mt-52 font-extralight'>
-                {message.split("").map((char, i) => {
+            <p className='tablet:text-2xl text-[1.3rem]  text-white-coded font-[Fira_Code] mt-52 font-extralight'>
+                {props.message.split("").map((char, i) => {
                     if (i >= index) {
                         return null;
                     };

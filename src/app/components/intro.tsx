@@ -17,6 +17,8 @@ export default function Intro(props: {message: string, disable: boolean}): JSX.E
     useEffect(() => {
         let timeout: NodeJS.Timeout;
 
+        document.getElementById("root")?.classList.add('overflow-hidden')
+
         const type = (i = 0) => {
             if (i > props.message.length) {
                 setTyping(false);
@@ -45,14 +47,17 @@ export default function Intro(props: {message: string, disable: boolean}): JSX.E
         // * 2. Enter effect making the cursor dissappear
         setTimeout((): void => setCursorHidden(true), 2900)
         
-        // * 3. Closing the curtain container from what i called lmao.
+        // * 3. Closing the curtain container from what i called lmao
         setTimeout((): void => setClosed(true), 3500)
+
+        // * 4 Allows the guest to scroll so the guest can see the hero section
+        setTimeout((): void => document.getElementById("root")?.classList.remove('overflow-hidden'), 4000)
 
         return () => clearTimeout(timeout)
     }, []);
 
     return (
-        <div className={`${isClosed ? '[clip-path:inset(0_0_100%_0)]' : '[clip-path:inset(0_0_0_0)]'} transition-[clip-path] duration-2000 ease-in-out w-full h-full top-0 bg-dark-intro absolute visible justify-center flex`}>
+        <div className={`${isClosed ? '[clip-path:inset(0_0_100%_0)]' : '[clip-path:inset(0_0_0_0)]'} transition-[clip-path] duration-2000 ease-in-out w-full h-full top-0 bg-dark-intro overflow-hidden fixed visible justify-center flex z-2`}>
             <p className='tablet:text-2xl text-[1.3rem]  text-white-coded font-[Fira_Code] mt-52 font-extralight'>
                 {props.message.split("").map((char, i) => {
                     if (i >= index) {

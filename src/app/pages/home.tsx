@@ -1,5 +1,6 @@
 import { type JSX, useEffect } from "react";
 import Intro from "../components/intro";
+import Navigation from "../components/navigation";
 
 /**
  * Provides the full portfolio contents
@@ -11,9 +12,21 @@ export default function HomePage(): JSX.Element {
     }, []);
 
     return (
-        <div className="flex items-center justify-center">
+        <div id="home-page" className="flex items-center justify-center">
             <Intro message="Hello World;" disable={false} />
-            <h1 id="testing-official" className="text-white-coded font-bold text-[45px]">Official Page</h1> 
+            <Navigation/>
+            <div className="flex-col overflow-hidden">
+                <h1 className="font-bold text-white-coded text-[78px]" onClick={():void => console.log("owo")}>Official Page</h1>
+                <h1 className="font-bold text-white-coded text-[78px]" onClick={():void => console.log("owo")}>Official Page</h1>
+                <h1 className="font-bold text-white-coded text-[78px]" onClick={():void => console.log("owo")}>Official Page</h1>
+                <h1 className="font-bold text-white-coded text-[78px]" onClick={():void => console.log("owo")}>Official Page</h1>
+                <h1 className="font-bold text-white-coded text-[78px]" onClick={():void => console.log("owo")}>Official Page</h1>
+                <h1 className="font-bold text-white-coded text-[78px]" onClick={():void => console.log("owo")}>Official Page</h1>
+                <h1 className="font-bold text-white-coded text-[78px]" onClick={():void => console.log("owo")}>Official Page</h1>
+                <h1 className="font-bold text-white-coded text-[78px]" onClick={():void => console.log("owo")}>Official Page</h1>
+                <h1 className="font-bold text-white-coded text-[78px]" onClick={():void => console.log("owo")}>Official Page</h1>
+                <h1 id="certifications" className="font-bold text-white-coded text-[78px]" onClick={():void => console.log("owo")}>Official Page</h1>
+            </div>
         </div>
     )
 };

@@ -14,6 +14,7 @@
     --color-yellow-coded: #DDE367;
     --color-orange-coded: #F17957;
     --color-purple-coded: #8269C7;
+    --color-light-blue-coded: #A9ACD7;
     --color-blue-coded: #46BB9E;
     --color-dark-intro: #10101B;
     --color-blue-bsod: #0000A0;
@@ -30,9 +31,11 @@
 
 @layer base {
     * {
-        margin: 0;
-        padding: 0;
         line-height: normal;
+    }
+
+    ::-webkit-scrollbar {
+        display: none;
     }
 
     body, html {

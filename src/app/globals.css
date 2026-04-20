@@ -6,10 +6,9 @@
 
 @theme {
     --breakpoint-*: initial;
-    --color-*: initial;
     
     /* Palletes */
-    --color-dark-coded: #0A1720;
+    --color-dark-coded: #12121C;
     --color-white-coded: #DFE3EE;
     --color-brown-coded: #C77B41;
     --color-yellow-coded: #DDE367;

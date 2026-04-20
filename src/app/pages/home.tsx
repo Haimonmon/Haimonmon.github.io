@@ -12,7 +12,7 @@ export default function HomePage(): JSX.Element {
 
     return (
         <div className="flex items-center justify-center">
-            <Intro/>
+            <Intro message="Hello World;" disable={false} />
             <h1 id="testing-official" className="text-white-coded font-bold text-[45px]">Official Page</h1> 
         </div>
     )

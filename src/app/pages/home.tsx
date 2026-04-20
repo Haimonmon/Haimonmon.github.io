@@ -1,4 +1,5 @@
 import { type JSX, useEffect } from "react";
+import Intro from "../components/intro";
 
 /**
  * Provides the full portfolio contents
@@ -9,5 +10,10 @@ export default function HomePage(): JSX.Element {
         document.body.className = "bg-dark-coded";
     }, []);
 
-    return <h1 id="testing-official" className="text-dark-coded">Official Page</h1>
+    return (
+        <div className="flex items-center justify-center">
+            <Intro/>
+            <h1 id="testing-official" className="text-white-coded font-bold text-[45px]">Official Page</h1> 
+        </div>
+    )
 };

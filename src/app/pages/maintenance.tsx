@@ -70,7 +70,7 @@ export default function MaintenancePage(): JSX.Element {
                     <li className="large-desktop:mb-[2vw] large-desktop:text-[1.25vw] small-desktop:mb-[2vw] small-desktop:text-[1.758vw] font-[BSOD_Font] text-white-bsod text-[4.375vw] mb-[6.25vw] list-none tablet:text-[2.344vw] tablet:mb-[2vw]">* A Temporary resume has been provided as an alternative.</li>
                     <li onClick={goToGithub} id="maintenance-github-link" className="large-desktop:mb-[2vw] large-desktop:text-[1.25vw] small-desktop:mb-[2vw] small-desktop:text-[1.758vw] tablet:mb-[2vw] tablet:text-[2.344vw] cursor-pointer font-[BSOD_Font] text-white-bsod text-[4.375vw] mb-[6.25vw] list-none">* Access to the <span id="fake-anchor-github-link" className="underline">Github</span> profile is available.</li>
                 </ul>
-                <p className="large-desktop:text-[1.25vw] small-desktop:text-[1.758vw] font-[BSOD_Font] text-white-bsod text-[4.375vw] cursor-pointer tablet:text-center tablet:text-[2.344vw]"><span onClick={goToResumeDesktop}>Press any key to download resume<span className="animate-blinker">_</span></span></p>
+                <p className="large-desktop:text-[1.25vw] small-desktop:text-[1.758vw] font-[BSOD_Font] text-white-bsod text-[4.375vw] tablet:text-center tablet:text-[2.344vw]"><span onClick={goToResumeDesktop} className="cursor-pointer">Press any key to download resume<span className="animate-blinker">_</span></span></p>
             </div>
         </div>
     )

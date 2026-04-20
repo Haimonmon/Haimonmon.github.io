@@ -8,7 +8,6 @@
     --breakpoint-*: initial;
     --color-*: initial;
     
-
     /* Palletes */
     --color-dark-coded: #0A1720;
     --color-white-coded: #DFE3EE;
@@ -17,6 +16,7 @@
     --color-orange-coded: #F17957;
     --color-purple-coded: #8269C7;
     --color-blue-coded: #46BB9E;
+    --color-dark-intro: #10101B;
     --color-blue-bsod: #0000A0;
     --color-white-bsod: #A9ACD7;
 
@@ -26,7 +26,7 @@
     --breakpoint-large-desktop: 1440px;
 
     /* Animations */
-    --animate-blinker: blinker 1.0s infinite;
+    --animate-blinker: blinker 1.0s step-end infinite;
 }
 
 @layer base {
@@ -47,6 +47,11 @@
 
     @font-face {
         font-family: 'Pixel Code';
-        src: url(../../public/fonts/PixelCode-Medium.ttf);
+        src: url(/fonts/PixelCode-Medium.ttf);
+    }
+
+    @font-face {
+        font-family: 'Fira Code';
+        src: url(/fonts/FiraCode-Medium.ttf);
     }
 }

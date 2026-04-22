@@ -7,7 +7,7 @@ import MaintenancePage from "./pages/maintenance";
  * @returns JSX.Element 
  */
 const App = (): JSX.Element => {
-  const maintenance: boolean = false;
+  const maintenance: boolean = true;
 
   return !maintenance ? <HomePage/> : <MaintenancePage/>
 };

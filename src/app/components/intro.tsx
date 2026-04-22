@@ -58,6 +58,7 @@ export default function Intro(props: {message: string, disable: boolean}): JSX.E
 
     return (
         <div className={`${isClosed ? '[clip-path:inset(0_0_100%_0)]' : '[clip-path:inset(0_0_0_0)]'} transition-[clip-path] duration-2000 ease-in-out w-full h-full top-0 bg-dark-intro overflow-hidden fixed visible justify-center flex z-2`}>
+            <p className='tablet:text-2xl text-[1.3rem]  text-purple-coded font-[Fira_Code] mt-52 font-extralight mr-2'>{'>'}</p>
             <p className='tablet:text-2xl text-[1.3rem]  text-white-coded font-[Fira_Code] mt-52 font-extralight'>
                 {props.message.split("").map((char, i) => {
                     if (i >= index) {
@@ -74,6 +75,7 @@ export default function Intro(props: {message: string, disable: boolean}): JSX.E
                         </span>
                     );
                 })}
+                
                 <span className={`${isTyping ? '' : 'animate-blinker'} text-purple-coded ${isCursorHidden ? 'hidden' : ''}`}>_</span>
             </p>
         </div>

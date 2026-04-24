@@ -16,6 +16,7 @@ export default function Intro(props: {message: string, disable: boolean}): JSX.E
 
     useEffect(() => {
         let timeout: NodeJS.Timeout;
+        const timeouts: NodeJS.Timeout[] = [];
 
         document.getElementById("root")?.classList.add('overflow-hidden')
 
@@ -39,21 +40,24 @@ export default function Intro(props: {message: string, disable: boolean}): JSX.E
         }
 
         // * 1. Fast Typing effect
-        setTimeout((): void => {
+        timeouts.push(setTimeout((): void => {
             setTyping(true);
             type();
-        }, 900)
+        }, 900));
 
         // * 2. Enter effect making the cursor dissappear
-        setTimeout((): void => setCursorHidden(true), 2900)
+        timeouts.push(setTimeout((): void => setCursorHidden(true), 2900));
         
         // * 3. Closing the curtain container from what i called lmao
-        setTimeout((): void => setClosed(true), 3500)
+        timeouts.push(setTimeout((): void => setClosed(true), 3500))
 
         // * 4 Allows the guest to scroll so the guest can see the hero section
-        setTimeout((): void => document.getElementById("root")?.classList.remove('overflow-hidden'), 4000)
+        timeouts.push(setTimeout((): void => document.getElementById("root")?.classList.remove('overflow-hidden'), 4000))
 
-        return () => clearTimeout(timeout)
+        return () => {
+            clearTimeout(timeout);
+            timeouts.forEach((timeout) => clearTimeout(timeout));
+        }
     }, []);
 
     return (

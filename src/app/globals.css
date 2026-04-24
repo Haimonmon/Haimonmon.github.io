@@ -21,7 +21,8 @@
     --color-white-bsod: #A9ACD7;
 
     /* Device Breakpoints */
-    --breakpoint-tablet: 500px;
+    --breakpoint-pablet: 500px;
+    --breakpoint-tablet: 768px;
     --breakpoint-small-desktop: 900px;
     --breakpoint-large-desktop: 1440px;
 

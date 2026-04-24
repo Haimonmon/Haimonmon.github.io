@@ -12,7 +12,7 @@ export default function HomePage(): JSX.Element {
     }, []);
 
     return (
-        <div id="home-page" className="flex items-center justify-center">
+        <>
             <Intro message="Hello World;" disable={false} />
             <Navigation/>
             <div className="flex-col overflow-hidden">
@@ -27,6 +27,6 @@ export default function HomePage(): JSX.Element {
                 <h1 className="font-bold text-white-coded text-[78px]" onClick={():void => console.log("owo")}>Official Page</h1>
                 <h1 id="certifications" className="font-bold text-white-coded text-[78px]" onClick={():void => console.log("owo")}>Official Page</h1>
             </div>
-        </div>
+        </>
     )
 };

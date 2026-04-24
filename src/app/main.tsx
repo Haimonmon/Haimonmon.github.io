@@ -1,8 +1,17 @@
-import { createRoot, type Root } from "react-dom/client";
+import { lazy } from "react";
+import SPA from "./core/spa";
 
-import App from "./app";
+const HomePage = lazy(() => import("./pages/home"));
+const AboutMePage = lazy(() => import("./pages/aboutme"));
+const ProjectsPage = lazy(() => import("./pages/projects"));
+const ReachMePage = lazy(() => import("./pages/reach"));
 
-const root: Root = createRoot(document.getElementById('root')!);
+const app: SPA = new SPA();
 
-root.render(<App/>)
+app.add('/', HomePage);
+app.add("connect", ReachMePage);
+app.add("about-me", AboutMePage);
+app.add("projects", ProjectsPage);
+
+app.render();
 

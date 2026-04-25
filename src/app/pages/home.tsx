@@ -1,4 +1,4 @@
-import { type JSX, useEffect } from "react";
+import { type JSX, useEffect, useState } from "react";
 import Intro from "../components/intro";
 import Navigation from "../components/navigation";
 
@@ -7,26 +7,32 @@ import Navigation from "../components/navigation";
  * @returns JSX Element
  */
 export default function HomePage(): JSX.Element {
+    const [isIntroShown, setIntroShown] = useState<boolean>(() => !sessionStorage.getItem('seenIntro'));
+
     useEffect(() => {
-        document.body.className = "bg-dark-coded";
+        if (!isIntroShown) return
+
+        const timeout = setTimeout(() => {
+            sessionStorage.setItem('seenIntro', "true")
+            setIntroShown(false);
+            console.log("Intro is now off.")
+        }, 4900);
+
+        return () => clearTimeout(timeout);
     }, []);
 
     return (
         <>
-            <Intro message="Hello World;" disable={false} />
-            <Navigation/>
-            <div className="flex-col overflow-hidden">
-                <h1 className="font-bold text-white-coded text-[78px]" onClick={():void => console.log("owo")}>Official Page</h1>
-                <h1 className="font-bold text-white-coded text-[78px]" onClick={():void => console.log("owo")}>Official Page</h1>
-                <h1 className="font-bold text-white-coded text-[78px]" onClick={():void => console.log("owo")}>Official Page</h1>
-                <h1 className="font-bold text-white-coded text-[78px]" onClick={():void => console.log("owo")}>Official Page</h1>
-                <h1 className="font-bold text-white-coded text-[78px]" onClick={():void => console.log("owo")}>Official Page</h1>
-                <h1 className="font-bold text-white-coded text-[78px]" onClick={():void => console.log("owo")}>Official Page</h1>
-                <h1 className="font-bold text-white-coded text-[78px]" onClick={():void => console.log("owo")}>Official Page</h1>
-                <h1 className="font-bold text-white-coded text-[78px]" onClick={():void => console.log("owo")}>Official Page</h1>
-                <h1 className="font-bold text-white-coded text-[78px]" onClick={():void => console.log("owo")}>Official Page</h1>
-                <h1 id="certifications" className="font-bold text-white-coded text-[78px]" onClick={():void => console.log("owo")}>Official Page</h1>
-            </div>
+            {/* {isIntroShown ? <Intro message="Hello World;" disable={false} /> : ''} */}
+            <h1 className="font-bold text-white-coded text-[78px]" onClick={():void => console.log("owo")}>Official Page</h1>
+            <h1 className="font-bold text-white-coded text-[78px]" onClick={():void => console.log("owo")}>Official Page</h1>
+            <h1 className="font-bold text-white-coded text-[78px]" onClick={():void => console.log("owo")}>Official Page</h1>
+            <h1 className="font-bold text-white-coded text-[78px]" onClick={():void => console.log("owo")}>Official Page</h1>
+            <h1 className="font-bold text-white-coded text-[78px]" onClick={():void => console.log("owo")}>Official Page</h1>
+            <h1 className="font-bold text-white-coded text-[78px]" onClick={():void => console.log("owo")}>Official Page</h1>
+            <h1 className="font-bold text-white-coded text-[78px]" onClick={():void => console.log("owo")}>Official Page</h1>
+            <h1 className="font-bold text-white-coded text-[78px]" onClick={():void => console.log("owo")}>Official Page</h1>
+            <h1 className="font-bold text-white-coded text-[78px]" onClick={():void => console.log("owo")}>Official Page</h1>
         </>
     )
 };

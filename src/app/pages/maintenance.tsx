@@ -9,7 +9,8 @@ export default function MaintenancePage(): JSX.Element {
 
     // * Checks if the device of the guest is desktop or mobile
     useEffect(() => {
-        document.body.className = 'bg-blue-bsod overflow-hidden';
+        document.body.classList.remove('bg-dark-coded')
+        document.body.classList.add('bg-blue-bsod')
 
         const handleWindowSizeChange = (): void => {
             setIsMobile(window.innerWidth <= 900)

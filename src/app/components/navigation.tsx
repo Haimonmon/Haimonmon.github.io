@@ -45,12 +45,14 @@ export default function Navigation(): JSX.Element {
     return (
         <>
             <div className="w-full h-16.5 fixed top-0
+                            pablet:max-w-md
+                            large-pablet:max-w-2xl
                             tablet:max-w-[46.4rem] tablet:w-full tablet:flex tablet:content-between
-                            small-desktop:max-w-[56.87rem]
+                            small-desktop:max-w-[56.87rem]    
                             ">
                             
-                <div className="tablet:static large-pablet:w-full large-pablet:max-w-2xl 
-                h-16.5 w-full top-0 flex items-center justify-between fixed bg-dark-coded z-1">
+                <div className="tablet:static large-pablet:w-full large-pablet:max-w-2xl large-pablet:p-0
+                pl-2 pr-2 pablet:p-0 pablet:max-w-md h-16.5 w-full top-0 flex items-center justify-between fixed bg-dark-coded z-1">
                     <NavLink to="/">
                         <h3 className="font-[Fira_Code] text-white-coded text-[1rem]"><span className="text-blue-coded">*</span>vince</h3>
                     </NavLink>
@@ -67,7 +69,8 @@ export default function Navigation(): JSX.Element {
                     {navigationData.map((data, i): JSX.Element => {
                         return (
                             <NavLink key={i + 1} to={data.path}>
-                                <div className={`${data.sectionTitle == "Home" ? 'tablet:hidden' : ''} tablet:m-0 tablet:h-full tablet:border-0 tablet:text-center tablet:w-fit ml-2 border-0 flex items-center w-full justify-end h-19.5 border-t border-b border-[#191926]`}>
+                                <div className={`${data.sectionTitle == "Home" ? 'tablet:hidden' : ''} tablet:m-0 tablet:h-full tablet:border-0 tablet:text-center tablet:w-fit ml-2 border-0 flex items-center w-full justify-end h-19.5 border-t border-b border-[#191926] pablet:max-w-md
+                            large-pablet:max-w-2xl`}>
                                     <p className={`tablet:hidden font-[Pixel_Code] text-sm w-15.5 h-[1.438rem] ${data.backgroundColor} text-left pl-[0.813rem]`}>0{i + 1}</p>
                                     <h1 className={`tablet:text-white-coded/80 ${data.textColor} ml-5 tablet:text-[1rem] tablet:w-fit tablet:h-fit tablet:ml-0`}>{data.sectionTitle}</h1>
                                 </div>

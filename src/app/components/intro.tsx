@@ -1,20 +1,19 @@
 import { useEffect, useState, type JSX } from 'react';
 
-
-let isShown: boolean = false;
-
 /**
  * Intro component, this only shows at the start of the website
  * @returns React jsx element
  */
 export default function Intro(props: {message: string, disable: boolean}): JSX.Element {
-
     const [isClosed, setClosed] = useState<boolean>(false);
     const [index, setIndex] = useState<number>(0);
     const [isTyping, setTyping] = useState<boolean>(false);
     const [isCursorHidden, setCursorHidden] = useState<boolean>(false);
 
     useEffect(() => {
+
+        console.log(!localStorage.getItem('seenIntro'), " <======")
+
         let timeout: NodeJS.Timeout;
         const timeouts: NodeJS.Timeout[] = [];
 
@@ -61,15 +60,13 @@ export default function Intro(props: {message: string, disable: boolean}): JSX.E
     }, []);
 
     return (
-        <div className={`${isClosed ? '[clip-path:inset(0_0_100%_0)]' : '[clip-path:inset(0_0_0_0)]'} transition-[clip-path] duration-2000 ease-in-out w-full h-full top-0 bg-dark-intro overflow-hidden fixed visible justify-center flex z-2`}>
+        <div className={`${isClosed ? '[clip-path:inset(0_0_100%_0)]' : '[clip-path:inset(0_0_0_0)]'} transition-[clip-path] duration-2000 ease-in-out w-full h-full left-0 top-0 bg-dark-intro overflow-hidden fixed visible justify-center flex z-2`}>
             <p className='tablet:text-2xl text-[1.3rem]  text-purple-coded font-[Fira_Code] mt-52 font-extralight mr-2'>{'>'}</p>
             <p className='tablet:text-2xl text-[1.3rem]  text-white-coded font-[Fira_Code] mt-52 font-extralight'>
                 {props.message.split("").map((char, i) => {
                     if (i >= index) {
                         return null;
                     };
-
-                    if (isCursorHidden) console.log("Entered!")
 
                     const isHello: boolean = i < 5;
 

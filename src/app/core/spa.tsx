@@ -30,6 +30,7 @@ class SPA {
      * @returns React element consist of full registered react Routes
      */
     register(): JSX.Element {
+        console.log("PLAYING AGAIN!")
         return (
             <BrowserRouter>
                 <Suspense fallback={<div className="w-full h-full fixed z-2 bg-dark-coded"></div>}>

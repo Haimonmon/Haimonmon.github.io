@@ -7,7 +7,7 @@ import { type JSX, type MouseEvent, useEffect, useState } from "react";
 export default function MaintenancePage(): JSX.Element {
     const [isMobile, setIsMobile] = useState<boolean>(window.innerWidth <= 900);
 
-    // * Checks if the device of the guest is desktop or mobile
+    // * Checks if the device of the guest is desktop or mobile 
     useEffect(() => {
         document.body.classList.remove('bg-dark-coded')
         document.body.classList.add('bg-blue-bsod')

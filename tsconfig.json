@@ -39,5 +39,13 @@
     "noUncheckedSideEffectImports": true,
     "moduleDetection": "force",
     "skipLibCheck": true,
-  }
+
+    // Paths that i use for short imports haha.
+    "paths": {
+      "@utils/*":["./src/utils/*"],
+      "@components/*": ["./src/app/components/*"],
+    },
+    "noUnusedLocals": true,
+    "noUnusedParameters": true
+  },
 }

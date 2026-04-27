@@ -57,7 +57,7 @@ export default function Navigation(): JSX.Element {
                     <NavLink to="/">
                         <h3 className="font-[Fira_Code] text-white-coded text-[1rem]"><span className="text-blue-coded">*</span>vince</h3>
                     </NavLink>
-                    <img className="w-6 h-4 tablet:hidden small-desktop:hidden" src="public/images/icons/burger-menu.png" alt="closed burger icon" onClick={() => setMenuClose(!isMenuClosed)}/>
+                    <img loading="lazy" className="w-6 h-4 tablet:hidden small-desktop:hidden" src="public/images/icons/burger-menu.png" alt="closed burger icon" onClick={() => setMenuClose(!isMenuClosed)}/>
                 </div>
                 
                 <div className={`large-pablet:p-0 text-[2.5rem] font-[Fira_Code] text-right pr-7 pl=2 flex flex-col w-full bg-dark-coded z-1 sticky top-16.5 

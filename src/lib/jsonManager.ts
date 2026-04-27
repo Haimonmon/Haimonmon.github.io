@@ -1,25 +1,20 @@
+
 /**
- * Handles json files super easy on my portfolio
+ * 
+ * @param data - data to add to the json file.
+ * @param path - link relative path to save the data.
+ * 
  */
-class JsonManager {
+const save = (data: any, path: string): void => {
 
-    /**
-     * 
-     * @param data - data to add to the json file.
-     * @param path - link relative path to save the data.
-     * 
-     */
-    save(data: any, path: string): void {
-
-    }
-
-    /**
-     * 
-     * @param path - link to relative path to retrieve the json data.
-     */
-    load(path: string) {
-
-    }
 }
 
-export default JsonManager;
+/**
+ * 
+ * @param path - link to relative path to retrieve the json data.
+ */
+const load = (path: string): any => {
+
+}
+
+export default {load, save};

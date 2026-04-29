@@ -1,11 +1,13 @@
 import { useState, type JSX } from "react";
 import { NavLink } from "react-router-dom";
 
+import navigationData from '@data-components/navigation.json'
+
 type NavigationData = {
-    sectionTitle: string,
-    textColor: string,
-    backgroundColor: string,
     path: string
+    textColor: string,
+    sectionTitle: string,
+    backgroundColor: string,
 }
 
 /**
@@ -13,34 +15,8 @@ type NavigationData = {
  *  @returns Component jsx element
  */
 export default function Navigation(): JSX.Element {
-    const navigationData: NavigationData[] = [
-        {
-            sectionTitle: "Home",
-            textColor: "text-brown-coded",
-            backgroundColor: "bg-brown-coded",
-            path: "/"
-        },
-        {
-            sectionTitle: "About Me",
-            textColor: "text-blue-coded",
-            backgroundColor: "bg-blue-coded",
-            path: "about-me"
-        },
-        {
-            sectionTitle: "Contact",
-            textColor: "text-yellow-coded",
-            backgroundColor: "bg-yellow-coded",
-            path: "connect"
-        },
-        {
-            sectionTitle: "Projects",
-            textColor: "text-light-blue-coded",
-            backgroundColor: "bg-light-blue-coded",
-            path: "projects"
-        }
-    ]
-
     const [isMenuClosed, setMenuClose] = useState<boolean>(true);
+    const typedNavigationData = navigationData satisfies NavigationData[]
 
     return (
         <>
@@ -70,7 +46,7 @@ export default function Navigation(): JSX.Element {
                     
                     tablet:transition-none tablet:[clip-path:inset(0_0_0_0)] tablet:gap-12.5 tablet:justify-end tablet:p-0 tablet:static tablet:z-2 tablet:top-0 tablet:flex-row tablet:h-16.5`}>
                         
-                    {navigationData.map((data, i): JSX.Element => {
+                    {typedNavigationData.map((data, i): JSX.Element => {
                         return (
                             <NavLink key={i + 1} to={data.path}>
                                 <div className={`${data.sectionTitle == "Home" ? 'tablet:hidden' : ''} tablet:m-0 tablet:h-full tablet:border-0 tablet:text-center tablet:w-fit border-0 flex items-center w-full justify-end h-19.5 border-t border-b border-[#191926] pablet:max-w-md

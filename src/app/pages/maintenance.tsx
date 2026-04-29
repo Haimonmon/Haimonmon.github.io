@@ -1,4 +1,20 @@
 import { type JSX, type MouseEvent, useEffect, useState } from "react";
+import maintenanceData from '@data-pages/maintenance.json';
+
+type MaintenanceData = {
+    [key: string]: {
+        errorTitle: string,
+        errorMessage: string,
+        errorType: string,
+        instructions: {
+            messages: string[],
+            interaction: {
+                message: string,
+                path: string
+            }
+        }
+    }
+}
 
 /**
  * Provides the maintenance contents
@@ -6,6 +22,8 @@ import { type JSX, type MouseEvent, useEffect, useState } from "react";
  */
 export default function MaintenancePage(props: {isNotFound: boolean}): JSX.Element {
     const [isMobile, setIsMobile] = useState<boolean>(window.innerWidth <= 900);
+    
+    const typedMaintenanceData = maintenanceData satisfies MaintenanceData;
 
     // * Checks if the device of the guest is desktop or mobile 
     useEffect(() => {

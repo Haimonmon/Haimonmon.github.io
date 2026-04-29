@@ -16,8 +16,10 @@
     "skipLibCheck": true,
     "paths": {
       "@utils/*":["./src/utils/*"],
-      "@components/*": ["./src/app/components/*"],
       "@library/*": ["./src/lib/*"],
+      "@components/*": ["./src/app/components/*"],
+      "@data-components/*":["./src/data/components/*"],
+      "@data-pages/*":["./src/data/pages/*"]
     },
     "noUnusedLocals": true,
     "noUnusedParameters": true

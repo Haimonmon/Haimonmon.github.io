@@ -1,7 +1,7 @@
 import { type JSX, lazy,  useEffect, useState } from 'react';
 import { Outlet, useLocation, matchPath, type Location } from 'react-router-dom';
 
-import Intro from "@components/intro";
+const Intro = lazy(() => import("@components/intro"));
 const Navigation = lazy(() => import("@components/navigation"));
 
 const MaintenancePage = lazy(() => import("../app/pages/maintenance"));
@@ -16,7 +16,6 @@ export default function MaintenanceRoute(props: {routes: {path: string, element:
 
     const [isIntroShown, setIntroShown] = useState<boolean>(() => !sessionStorage.getItem('seenIntro'));
     
-
     useEffect(() => {
         console.log(isNotFound, " isFound?")
         console.log("Checking on by Protection Route.")

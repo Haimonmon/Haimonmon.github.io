@@ -1,0 +1,92 @@
+{
+    "/": {
+        "errorTitle": "NOT ERROR",
+        "errorMessage": "Vince Portfolio is currently undergoing scheduled maintenance and is temporarily unavailable.",
+        "errorType": "Maintenance Mode",
+        "instructions": {
+            "messages": [
+                "A Temporary resume has been provided as an alternative.",
+                "Access to the Github profile is available."
+            ],
+            "interaction":{
+                "message": "Press any key to download resume",
+                "path": ""
+            }
+        }
+    },
+    "aboutMe": {
+        "errorTitle": "NOT ERROR",
+        "errorMessage": "Vince Portfolio is currently undergoing scheduled maintenance and is temporarily unavailable.",
+        "errorType": "Maintenance Mode",
+        "instructions": {
+            "messages": [
+                "A Temporary resume has been provided as an alternative.",
+                "Access to the Github profile is available."
+            ],
+            "interaction":{
+                "message": "Press any key to download resume",
+                "path": ""
+            }
+        }
+    },
+    "projects": {
+        "errorTitle": "NOT ERROR",
+        "errorMessage": "Vince Portfolio is currently undergoing scheduled maintenance and is temporarily unavailable.",
+        "errorType": "Maintenance Mode",
+        "instructions": {
+            "messages": [
+                "A Temporary resume has been provided as an alternative.",
+                "Access to the Github profile is available."
+            ],
+            "interaction":{
+                "message": "Press any key to download resume",
+                "path": ""
+            }
+        }
+    },
+    "specificProject": {
+        "errorTitle": "NOT ERROR",
+        "errorMessage": "Vince Portfolio is currently undergoing scheduled maintenance and is temporarily unavailable.",
+        "errorType": "Maintenance Mode",
+        "instructions": {
+            "messages": [
+                "A Temporary resume has been provided as an alternative.",
+                "Access to the Github profile is available."
+            ],
+            "interaction":{
+                "message": "Press any key to download resume",
+                "path": ""
+            }
+        }
+    },
+    "connect": {
+        "errorTitle": "NOT ERROR",
+        "errorMessage": "Vince Portfolio is currently undergoing scheduled maintenance and is temporarily unavailable.",
+        "errorType": "Maintenance Mode",
+        "instructions": {
+            "messages": [
+                "A Temporary resume has been provided as an alternative.",
+                "Access to the Github profile is available."
+            ],
+            "interaction":{
+                "message": "Press any key to download resume",
+                "path": ""
+            }
+        }
+    },
+    "*": {
+        "errorTitle": "NOT ERROR",
+        "errorMessage": "Vince Portfolio is currently undergoing scheduled maintenance and is temporarily unavailable.",
+        "errorType": "Maintenance Mode",
+        "instructions": {
+            "messages": [
+                "A Temporary resume has been provided as an alternative.",
+                "Access to the Github profile is available."
+            ],
+            "interaction":{
+                "message": "Press any key to download resume",
+                "path": ""
+            }
+        }
+    }
+}

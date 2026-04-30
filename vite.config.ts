@@ -1,15 +1,26 @@
-import { defineConfig } from 'vite';
+import path from 'path';
+import { defineConfig, type UserConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import tailwindcss from '@tailwindcss/vite';
 
 
-export default defineConfig({
+const viteConfig: UserConfig = defineConfig({
     plugins: [
         react(),
         tailwindcss()
     ],
     server: {
         port: 9000
+    },
+    resolve: {
+        alias: {
+            "@utils": path.resolve(__dirname, "./src/utils"),
+            "@library": path.resolve(__dirname, "./src/lib"),
+            "@data-pages": path.resolve(__dirname, "./src/data/pages"),
+            "@components": path.resolve(__dirname, "./src/app/components"),
+            "@data-components": path.resolve(__dirname, "./src/data/components")
+        }
     }
 })
 
+export default viteConfig

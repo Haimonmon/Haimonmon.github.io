@@ -1,0 +1,28 @@
+[
+    {
+        "title": "My Privacy Policy",
+        "date": "May 28, 2026"
+    },
+    {
+        "subtitle": "TL;DR",
+        "content": [
+            {
+                "type": "paragraph",
+                "message": "achuachu"
+            },
+            {
+                "type": "unordered_list",
+                "list": ["this is message 1", "this is message 2", "this is message 3"]
+            }
+        ]
+    },
+    {
+        "subtitle": "Question?",
+        "content": [
+            {
+                "type": "paragraph",
+                "message": "have question?"
+            }
+        ]
+    }
+]

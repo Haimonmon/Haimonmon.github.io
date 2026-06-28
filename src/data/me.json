@@ -1,0 +1,23 @@
+{
+    "employment": "unemployed",
+    "resume": "/resume/DeCastroVinceCarlo.pdf",
+    "passion": "Full stack by passion,backend focused by profession. building APIs and scalable systems, exploring low level programming and game development.",
+    "about_me": "22 year old Junior Software Engineer based in The Philippines. ",
+    "first_name": "Vince Carlo",
+    "last_name": "De Castro",
+    "nickname": "Vince",
+    "socials": [
+        {
+            "name": "Github",
+            "url": "https://github.com/Haimonmon"
+        },
+        {
+            "name": "LinkedIn",
+            "url": "https://www.linkedin.com/in/vincecarlo/"
+        },
+        {
+            "name": "Telegram",
+            "url": "@haimonmon"
+        }
+    ]
+}

@@ -18,7 +18,8 @@ const viteConfig: UserConfig = defineConfig({
             "@library": path.resolve(__dirname, "./src/lib"),
             "@data-pages": path.resolve(__dirname, "./src/data/pages"),
             "@components": path.resolve(__dirname, "./src/app/components"),
-            "@data-components": path.resolve(__dirname, "./src/data/components")
+            "@data-components": path.resolve(__dirname, "./src/data/components"),
+            "@data": path.resolve(__dirname, "./src/data")
         }
     }
 })

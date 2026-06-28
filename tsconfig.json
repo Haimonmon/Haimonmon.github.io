@@ -7,6 +7,8 @@
     "declarationMap": true,
     "noUncheckedIndexedAccess": true,
     "exactOptionalPropertyTypes": true,
+    "moduleResolution": "bundler",
+    "lib": ["DOM", "DOM.Iterable", "ES2020"],
     "strict": true,
     "jsx": "react-jsx",
     "verbatimModuleSyntax": true,
@@ -15,13 +17,14 @@
     "moduleDetection": "force",
     "skipLibCheck": true,
     "paths": {
-      "@utils/*":["./src/utils/*"],
+      "@utils/*": ["./src/utils/*"],
       "@library/*": ["./src/lib/*"],
       "@components/*": ["./src/app/components/*"],
-      "@data-components/*":["./src/data/components/*"],
-      "@data-pages/*":["./src/data/pages/*"]
+      "@data-components/*": ["./src/data/components/*"],
+      "@data-pages/*": ["./src/data/pages/*"],
     },
     "noUnusedLocals": true,
-    "noUnusedParameters": true
+    "noUnusedParameters": true,
   },
+  "include": ["src"]
 }

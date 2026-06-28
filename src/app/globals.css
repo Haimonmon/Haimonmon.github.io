@@ -1,26 +1,30 @@
 @import "tailwindcss";
 
 @keyframes blinker {
-  50% { opacity: 0; }
+    50% {
+        opacity: 0;
+    }
 }
 
 @theme {
     --breakpoint-*: initial;
-    
+
     /* Palletes */
-    --color-dark-coded: #12121C;
-    --color-white-coded: #DFE3EE;
-    --color-brown-coded: #C77B41;
-    --color-yellow-coded: #DDE367;
-    --color-orange-coded: #F17957;
-    --color-purple-coded: #8269C7;
-    --color-light-blue-coded: #A9ACD7;
-    --color-blue-coded: #46BB9E;
-    --color-dark-intro: #10101B;
-    --color-blue-bsod: #0000A0;
-    --color-white-bsod: #A9ACD7;
+    --color-dark-coded: #12121c;
+    --color-white-coded: #dfe3ee;
+    --color-brown-coded: #c77b41;
+    --color-yellow-coded: #dde367;
+    --color-orange-coded: #f17957;
+    --color-purple-coded: #8269c7;
+    --color-light-blue-coded: #a9acd7;
+    --color-blue-coded: #46bb9e;
+    --color-dark-intro: #10101b;
+    --color-blue-bsod: #0000a0;
+    --color-white-bsod: #a9acd7;
 
     /* Device Breakpoints */
+    --breakpoint-medium-phone: 376px;
+    --breakpoint-large-phone: 425px;
     --breakpoint-pablet: 500px;
     --breakpoint-large-pablet: 650px;
     --breakpoint-tablet: 768px;
@@ -28,7 +32,7 @@
     --breakpoint-large-desktop: 1440px;
 
     /* Animations */
-    --animate-blinker: blinker 1.0s step-end infinite;
+    --animate-blinker: blinker 1s step-end infinite;
 }
 
 @layer base {
@@ -41,7 +45,8 @@
         display: none;
     }
 
-    body, html {
+    body,
+    html {
         min-height: 100%;
         width: 100%;
     }
@@ -52,12 +57,12 @@
     }
 
     @font-face {
-        font-family: 'Pixel Code';
+        font-family: "Pixel Code";
         src: url(/fonts/PixelCode-Medium.ttf);
     }
 
     @font-face {
-        font-family: 'Fira Code';
+        font-family: "Fira Code";
         src: url(/fonts/FiraCode-Medium.ttf);
     }
 }

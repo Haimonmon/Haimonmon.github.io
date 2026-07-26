@@ -52,13 +52,17 @@ export default function Navigation(): JSX.Element {
                     ${isMenuClosed ? "[clip-path:inset(0_0_100%_0)]" : "[clip-path:inset(0_0_0_0)]"}
 
                     ${isMenuClosed ? "h-0" : "h-screen"}
-                    motion-safe:transition-[height,_clip-path] duration-800 ease-in-out
+                    motion-safe:transition-[height,_clip-path] duration-950 ease-in-out
 
                     tablet:transition-none tablet:[clip-path:inset(0_0_0_0)] tablet:gap-12.5 tablet:justify-end tablet:p-0 tablet:static tablet:z-2 tablet:top-0 tablet:flex-row tablet:h-16.5`}
         >
           {typedNavigationData.map((data, i): JSX.Element => {
             return (
-              <NavLink key={i + 1} to={data.path} onClick={() => setMenuClose(true)}>
+              <NavLink
+                key={i + 1}
+                to={data.path}
+                onClick={() => setTimeout(() => setMenuClose(true), 300)}
+              >
                 <div
                   className={`${data.sectionTitle == "Home" ? "tablet:hidden" : ""} tablet:m-0 tablet:h-full tablet:border-0 tablet:text-center tablet:w-fit border-0 flex items-center w-full justify-end h-19.5 border-t border-b border-[#191926] pablet:max-w-md
                             large-pablet:max-w-2xl`}

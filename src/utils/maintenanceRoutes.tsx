@@ -11,38 +11,38 @@ const MaintenancePage = lazy(() => import("../app/pages/maintenance"));
  * source route protection: https://youtu.be/pyfwQUc5Ssk?si=aYTnewgdMxNYStfz
  */
 export default function MaintenanceRoute(props: {
-    routes: { path: string; element: JSX.Element }[];
+  routes: { path: string; element: JSX.Element }[];
 }): JSX.Element {
-    const location: Location = useLocation();
-    const isMaintenanced: boolean = import.meta.env.VITE_APP_MAINTENANCE_MODE === "true" || false;
-    const isNotFound: boolean = !props.routes
-        .filter((route) => route.path !== "*")
-        .some((route) => matchPath(route.path, location.pathname));
+  const location: Location = useLocation();
+  const isMaintenanced: boolean = import.meta.env.VITE_APP_MAINTENANCE_MODE === "true" || false;
+  const isNotFound: boolean = !props.routes
+    .filter((route) => route.path !== "*")
+    .some((route) => matchPath(route.path, location.pathname));
 
-    const [isIntroShown, setIntroShown] = useState<boolean>(
-        () => !sessionStorage.getItem("seenIntro"),
-    );
+  const [isIntroShown, setIntroShown] = useState<boolean>(
+    () => !sessionStorage.getItem("seenIntro"),
+  );
 
-    useEffect(() => {
-        if (!isIntroShown) return;
+  useEffect(() => {
+    if (!isIntroShown) return;
 
-        const timeout = setTimeout(() => {
-            sessionStorage.setItem("seenIntro", "true");
-            setIntroShown(false);
-            console.log("Intro is now off.");
-        }, 4900);
+    const timeout = setTimeout(() => {
+      sessionStorage.setItem("seenIntro", "true");
+      setIntroShown(false);
+      console.log("Intro is now off.");
+    }, 4900);
 
-        return () => clearTimeout(timeout);
-    }, []);
+    return () => clearTimeout(timeout);
+  }, []);
 
-    // // * Planning to have different 404 Pages between maintenance and not maintenance
-    // if (isNotFound) return (
-    //     <Outlet/>
-    // )
+  // // * Planning to have different 404 Pages between maintenance and not maintenance
+  // if (isNotFound) return (
+  //     <Outlet/>
+  // )
 
-    return !isMaintenanced ? (
-        <div
-            className="
+  return !isMaintenanced ? (
+    <div
+      className="
             wrap-anywhere
             w-full
             ml-2 mr-2
@@ -52,13 +52,13 @@ export default function MaintenanceRoute(props: {
             large-pablet:max-w-2xl
             tablet:max-w-[46.4rem]
             small-desktop:max-w-[56.87rem]"
-        >
-            {isIntroShown ? <Intro message="Hello World;" disable={false} /> : ""}
-            <Navigation />
-            <Outlet />
-            <Footer />
-        </div>
-    ) : (
-        <MaintenancePage isNotFound={isNotFound} />
-    );
+    >
+      {isIntroShown ? <Intro message="Hello World;" disable={false} /> : ""}
+      <Navigation />
+      <Outlet />
+      <Footer />
+    </div>
+  ) : (
+    <MaintenancePage isNotFound={isNotFound} />
+  );
 }

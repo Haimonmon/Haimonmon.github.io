@@ -14,9 +14,11 @@
   "license": "ISC",
   "dependencies": {
     "@tailwindcss/vite": "^4.2.2",
+    "clsx": "^2.1.1",
     "react": "^19.2.5",
     "react-dom": "^19.2.5",
     "react-router-dom": "^7.14.2",
+    "tailwind-merge": "^3.6.0",
     "tailwindcss": "^4.2.2"
   },
   "devDependencies": {

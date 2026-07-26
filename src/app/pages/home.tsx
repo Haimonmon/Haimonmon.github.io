@@ -15,8 +15,8 @@ export default function HomePage(): JSX.Element {
     <div className="grid grid-cols-1">
       <HeroCard />
       <MeCard />
-      <StacksCard />
-      <ProjectCard />
+      <StacksCard className="mt-10" />
+      <ProjectCard className="mt-7.5" />
       <CareerCard />
       <CertificateCard />
     </div>

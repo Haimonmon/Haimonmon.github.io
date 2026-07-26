@@ -65,4 +65,9 @@
         font-family: "Fira Code";
         src: url(/fonts/FiraCode-Medium.ttf);
     }
+
+    @font-face {
+        font-family: "Fira Code Semibold";
+        src: url(/fonts/FiraCode-SemiBold.ttf);
+    }
 }

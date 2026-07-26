@@ -9,14 +9,9 @@ const ProjectsPage = lazy(() => import("./pages/projects"));
 const app: SPA = new SPA();
 const isStrict: boolean = false; // * For Debugging purposes only
 
-app.add('/', HomePage);
-app.add("connect", ReachMePage);
-app.add("about-me", AboutMePage);
+app.add("/", HomePage);
+app.add("careers", ReachMePage);
+app.add("stacks", AboutMePage);
 app.add("projects", ProjectsPage);
 
 app.render(isStrict);
-
-// TODO:
-/**
- * 1. Make the typewriter effect a component so i can reuse it
- */

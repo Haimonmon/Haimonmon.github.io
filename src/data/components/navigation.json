@@ -1,26 +1,26 @@
 [
-    {
-        "sectionTitle": "Home",
-        "textColor": "text-brown-coded",
-        "backgroundColor": "bg-brown-coded",
-        "path": "/"
-    },
-    {
-        "sectionTitle": "About Me",
-        "textColor": "text-blue-coded",
-        "backgroundColor": "bg-blue-coded",
-        "path": "about-me"
-    },
-    {
-        "sectionTitle": "Contact",
-        "textColor": "text-yellow-coded",
-        "backgroundColor": "bg-yellow-coded",
-        "path": "connect"
-    },
-    {
-        "sectionTitle": "Projects",
-        "textColor": "text-light-blue-coded",
-        "backgroundColor": "bg-light-blue-coded",
-        "path": "projects"
-    }
+  {
+    "sectionTitle": "Home",
+    "textColor": "text-brown-coded",
+    "backgroundColor": "bg-brown-coded",
+    "path": "/"
+  },
+  {
+    "sectionTitle": "Stacks",
+    "textColor": "text-blue-coded",
+    "backgroundColor": "bg-blue-coded",
+    "path": "stacks"
+  },
+  {
+    "sectionTitle": "Careers",
+    "textColor": "text-yellow-coded",
+    "backgroundColor": "bg-yellow-coded",
+    "path": "careers"
+  },
+  {
+    "sectionTitle": "Projects",
+    "textColor": "text-light-blue-coded",
+    "backgroundColor": "bg-light-blue-coded",
+    "path": "projects"
+  }
 ]

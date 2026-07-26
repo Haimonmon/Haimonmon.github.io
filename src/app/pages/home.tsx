@@ -1,3 +1,9 @@
+import CareerCard from "@components/home/career-card";
+import CertificateCard from "@components/home/certificate-card";
+import HeroCard from "@components/home/hero-card";
+import MeCard from "@components/home/me-card";
+import ProjectCard from "@components/home/projects/project-card";
+import StacksCard from "@components/home/stacks-card";
 import { type JSX } from "react";
 
 /**
@@ -5,17 +11,14 @@ import { type JSX } from "react";
  * @returns JSX Element
  */
 export default function HomePage(): JSX.Element {
-    return (
-        <>
-            <h1 className="font-bold text-white-coded text-[78px]" onClick={():void => console.log("owo")}>Official Page</h1>
-            <h1 className="font-bold text-white-coded text-[78px]" onClick={():void => console.log("owo")}>Official Page</h1>
-            <h1 className="font-bold text-white-coded text-[78px]" onClick={():void => console.log("owo")}>Official Page</h1>
-            <h1 className="font-bold text-white-coded text-[78px]" onClick={():void => console.log("owo")}>Official Page</h1>
-            <h1 className="font-bold text-white-coded text-[78px]" onClick={():void => console.log("owo")}>Official Page</h1>
-            <h1 className="font-bold text-white-coded text-[78px]" onClick={():void => console.log("owo")}>Official Page</h1>
-            <h1 className="font-bold text-white-coded text-[78px]" onClick={():void => console.log("owo")}>Official Page</h1>
-            <h1 className="font-bold text-white-coded text-[78px]" onClick={():void => console.log("owo")}>Official Page</h1>
-            <h1 className="font-bold text-white-coded text-[78px]" onClick={():void => console.log("owo")}>Official Page</h1>
-        </>
-    )
-};
+  return (
+    <div className="grid grid-cols-1">
+      <HeroCard />
+      <MeCard />
+      <StacksCard />
+      <ProjectCard />
+      <CareerCard />
+      <CertificateCard />
+    </div>
+  );
+}
